@@ -1,0 +1,11 @@
+.team-div{
+    background: #357367;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
+
+.team-chart{
+    background: #f1f1e6;
+}

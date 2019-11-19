@@ -1,0 +1,11 @@
+.player-div {
+background: #357367;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 90vh;
+}
+
+.player-chart{
+    background: #f1f1e6;
+}

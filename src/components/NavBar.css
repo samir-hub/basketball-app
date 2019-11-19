@@ -1,0 +1,42 @@
+.navlinks{
+    display: flex;
+    max-width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    background: #2f4f4f;
+    height: 10vh;
+}
+
+.button{
+    padding: 1%;
+    text-decoration: none;
+    color: #F1F1E6;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .navlinks {
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      min-height: 25vh;
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .button {
+      border-bottom: 1px solid white;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .button:last-child {
+      border-bottom: none;
+    }
+  }
