@@ -9,3 +9,17 @@
 .team-chart{
     background: #f1f1e6;
 }
+
+@media only screen and (max-width: 600px) {
+    .team-chart {
+      transform: scale(0.3);
+      position: absolute;
+      top: 50;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .team-div {
+      justify-content: flex-end;
+    }
+  }
