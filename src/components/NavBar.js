@@ -12,7 +12,7 @@ function NavBar() {
         <Link className="button" to="/teamstats">
           Team Stats
         </Link>
-        <Link className="button" to="/playerstats">Player Stats</Link>
+        <Link className="button" to="/playerstats">Shot Charts</Link>
         <Link className="button" to="/teamstats">Login</Link>
       </header>
     </div>

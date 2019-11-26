@@ -10,8 +10,11 @@ height: 90vh;
     background: #f1f1e6;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5),
     -1px -1px 30px rgba(0, 0, 0, 0.2);
+    width: 50%;
    
 }
+
+
 
 @media only screen and (max-width: 600px) {
     .player-div {
@@ -35,6 +38,7 @@ height: 90vh;
     padding: 20px;
     border-radius: 10px;
     color: #357367;
+   
 }
 
 @media only screen and (max-width: 600px) {
