@@ -44,9 +44,9 @@ function NavBar() {
     </Menu.Item>
 
     <Menu.Item key="alipay">
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-        My Team
-      </a>
+    <Link to="/myteam">
+          My Team
+        </Link>
     </Menu.Item>
     <SubMenu
       title={

@@ -9,12 +9,20 @@ import PlayerStats from "./components/PlayerStats";
 
 function App() {
   const [namesAndIds, setNamesAndIds] = useState([]);
-
   let playersApi = `https://stats.theseventhman.net/stats/api/v1/players/distinct/`;
+
+  const [teamsAndIds, setTeamsAndIds] = useState([]);
+  let teamsApi = `https://stats.theseventhman.net/stats/api/v1/teams/all/`;
 
   useEffect(() => {
     axios.get(playersApi).then(response => {
       setNamesAndIds(response.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    axios.get(teamsApi).then(response => {
+      setTeamsAndIds(response.data);
     });
   }, []);
   return (
@@ -24,8 +32,15 @@ function App() {
           <NavBar />
         </header>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/teamstats" component={TeamStats} />
+        <Route
+            path="/"
+            exact
+            render={props => <Home {...props} teamsAndIds={teamsAndIds} />}
+          />
+          <Route
+            path="/teamstats"
+            render={props => <TeamStats {...props} teamsAndIds={teamsAndIds} />}
+          />
           <Route
             path="/playerstats"
             render={props => <PlayerStats {...props} namesAndIds={namesAndIds} />}

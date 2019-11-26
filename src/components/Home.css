@@ -1,5 +1,5 @@
 .main-div {
-  background: #357367;
+  background: slategrey;
   height: 90vh;
   display: flex;
   justify-content: space-around;
@@ -20,11 +20,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5),
     -1px -1px 30px rgba(0, 0, 0, 0.2);
-  background: #de733f;
-  color: #f1f1e6;
+  background: #253442;
+  color: #C8D9EA;
   height: 60vh;
   padding: 30px;
 }
@@ -36,6 +36,7 @@
 
 .cta-text{
     text-align: center;
+    color: #C8D9EA;
 }
 
 .main-heading {
@@ -47,10 +48,11 @@
 .cta-heading {
   font-size: 2.3rem;
   text-align: center;
+  color: #708090;
 }
 
 .input-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .cta-favteam {
@@ -62,15 +64,28 @@
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 8px;
   font-size: 1.5rem;
+  color: darkslategrey;
 }
 
 .main-image {
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5),
     -1px -1px 30px rgba(0, 0, 0, 0.2);
+}
+
+.fav-team-options{
+  color: black;
+}
+
+.fav-team-placeholder{
+  color: black;
+}
+
+.select-title {
+  color: #708090;
 }
 
 @media only screen and (max-width: 600px) {
