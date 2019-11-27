@@ -3,6 +3,7 @@ import "./MyTeam.css";
 import axios from "axios";
 import { Layout, Menu, Breadcrumb, Icon, Card } from "antd";
 import "antd/dist/antd.css";
+import PlayerCard from "./PlayerCard";
 
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
@@ -13,7 +14,7 @@ const MyTeam = props => {
     teamId: "1610612745",
     teamName: "HOU"
   });
-  const [chosen, setChosen] = useState(0);
+  const [chosen, setChosen] = useState(201935);
 
   let api = `https://stats.theseventhman.net/stats/api/v1/players/?&season=2020`;
 
@@ -48,16 +49,15 @@ const MyTeam = props => {
       });
     }
   };
+  
 
   const handleClick = e => {
     setChosen(e.key);
     console.log(e.key);
   };
 
- 
 
-  console.log("my players", myPlayers["0"]);
-  console.log("THIS", chosen);
+  console.log(chosen);
 
   return (
     <div>
@@ -91,7 +91,7 @@ const MyTeam = props => {
               >
                 {myPlayers.map((player, key) => {
                   return (
-                    <Menu.Item onClick={e => handleClick(e)} key={key}>
+                    <Menu.Item key={key} onClick={() => setChosen(player.player_id)}>
                       {player.player_name}
                     </Menu.Item>
                   );
@@ -109,21 +109,7 @@ const MyTeam = props => {
                 minHeight: 280
               }}
             >
-              {myPlayers.map((player, key) => {
-                if (key === chosen) {
-                  return (
-                    <Card
-                      key={key}
-                      size="default"
-                      title={player.player_name}
-                      extra={<a href="#">More</a>}
-                      style={{ width: 300 }}
-                    >
-                      <p>{player.player_name}</p>
-                    </Card>
-                  );
-                }
-              })}
+              <PlayerCard myPlayers={myPlayers} chosen={chosen}/>
             </Content>
           </Layout>
         </Layout>
