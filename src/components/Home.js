@@ -37,7 +37,7 @@ const Home = props => {
           Welcome to Basketball Stats. You can check out your favorite team's
           stats or see how your favorite player is faring this season.
         </h2>
-        <form className="select-team-form">
+        {/* <form className="select-team-form">
           <div className="field">
             <h1 className="select-title">Select Your Team:</h1>
             <select onChange={e => setFavTeam({ teamId: e.target.value })}>
@@ -45,14 +45,8 @@ const Home = props => {
               {displayTeams()}
             </select>
           </div>
-        </form>
+        </form> */}
       </div>
-      <BrowserRouter>
-        <Route
-          path="/myteam"
-          render={props => <MyTeam {...props} favTeam={favTeam} />}
-        />
-      </BrowserRouter>
     </div>
   );
 };

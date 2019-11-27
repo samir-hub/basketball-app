@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import TeamStats from "./components/TeamStats";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PlayerStats from "./components/PlayerStats";
+import MyTeam from "./components/MyTeam";
 
 function App() {
   const [namesAndIds, setNamesAndIds] = useState([]);
@@ -32,7 +33,7 @@ function App() {
           <NavBar />
         </header>
         <Switch>
-        <Route
+          <Route
             path="/"
             exact
             render={props => <Home {...props} teamsAndIds={teamsAndIds} />}
@@ -43,7 +44,15 @@ function App() {
           />
           <Route
             path="/playerstats"
-            render={props => <PlayerStats {...props} namesAndIds={namesAndIds} />}
+            render={props => (
+              <PlayerStats {...props} namesAndIds={namesAndIds} />
+            )}
+          />
+          <Route
+            path="/myteam"
+            render={props => (
+              <MyTeam {...props} teamsAndIds={teamsAndIds} />
+            )}
           />
         </Switch>
       </BrowserRouter>
