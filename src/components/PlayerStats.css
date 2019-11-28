@@ -1,16 +1,10 @@
 .player-div {
-background: slategrey;
-display: flex;
-justify-content: space-around;
-align-items: center;
-height: 90vh;
+  
 }
 
 .player-chart{
-    background: #f1f1e6;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5),
-    -1px -1px 30px rgba(0, 0, 0, 0.2);
-    width: 50%;
+  margin: 0 auto; 
+  width: 100%;
    
 }
 
@@ -20,29 +14,32 @@ height: 90vh;
     .player-div {
       max-width: 100%;
       flex-direction: column;
-      justify-content: flex-start;
+      
     }
   }
 
 @media only screen and (max-width: 600px) {
     .player-chart {
-      transform: scale(0.6);
+      transform: scale(0.4);
+
     }
   }
 
 .select-form {
-    background: #f1f1e6;
-    height: 65%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5),
-    -1px -1px 30px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    color: #357367;
+  margin-left: 20px;
    
 }
 
 @media only screen and (max-width: 600px) {
     .select-form {
-      
+      margin: 0 auto; 
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .stylethis {
+      display: flex;
+      justify-content: center;
+
     }
   }

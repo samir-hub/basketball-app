@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./MyTeam.css";
 import axios from "axios";
-import { Layout, Menu, Breadcrumb, Icon, Card } from "antd";
+import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import "antd/dist/antd.css";
 import PlayerCard from "./PlayerCard";
 
 const { SubMenu } = Menu;
-const { Content, Sider } = Layout;
+const { Content, Sider, Footer } = Layout;
 
 const MyTeam = props => {
   const [data, setData] = useState([]);
@@ -22,12 +22,13 @@ const MyTeam = props => {
     axios.get(api).then(response => {
       setData(response.data);
     });
-  }, []);
+  }, [api]);
 
   let myPlayers = data.filter(e => {
     if (e.teams === favTeam.teamName) {
       return e.player_name;
     }
+    return null;
   });
 
   const displayTeams = () => {
@@ -49,31 +50,36 @@ const MyTeam = props => {
       });
     }
   };
-  
-
-  const handleClick = e => {
-    setChosen(e.key);
-    console.log(e.key);
-  };
-
 
   console.log(chosen);
 
   return (
     <div>
-      <form className="select-team-form">
-        <div className="field">
-          <h1 className="select-title">Select Your Team:</h1>
-          <select onChange={e => setFavTeam({ teamName: e.target.value })}>
-            <option className="fav-team-placeholder">HOU</option>
-            {displayTeams()}
-          </select>
-        </div>
-      </form>
-
       <Layout>
         <Layout>
-          <Sider width={200} style={{ background: "#fff" }}>
+          <Sider
+            breakpoint="lg"
+            collapsedWidth="0"
+            onBreakpoint={broken => {
+              console.log(broken);
+            }}
+            onCollapse={(collapsed, type) => {
+              console.log(collapsed, type);
+            }}
+            className="my-player-submenu"
+            style={{ background: "#fff" }}
+          >
+            <form className="select-team-form">
+              <div className="field">
+                <h1 className="select-title">Select Your Team:</h1>
+                <select
+                  onChange={e => setFavTeam({ teamName: e.target.value })}
+                >
+                  <option className="fav-team-placeholder">HOU</option>
+                  {displayTeams()}
+                </select>
+              </div>
+            </form>
             <Menu
               mode="inline"
               defaultSelectedKeys={["1"]}
@@ -91,7 +97,11 @@ const MyTeam = props => {
               >
                 {myPlayers.map((player, key) => {
                   return (
-                    <Menu.Item key={key} onClick={() => setChosen(player.player_id)}>
+                    <Menu.Item
+                      className="my-player-names"
+                      key={key}
+                      onClick={() => setChosen(player.player_id)}
+                    >
                       {player.player_name}
                     </Menu.Item>
                   );
@@ -109,10 +119,13 @@ const MyTeam = props => {
                 minHeight: 280
               }}
             >
-              <PlayerCard myPlayers={myPlayers} chosen={chosen}/>
+              <PlayerCard myPlayers={myPlayers} chosen={chosen} />
             </Content>
           </Layout>
         </Layout>
+        <Footer style={{ textAlign: "center" }}>
+          Basketball Stats ©2019 Created by Samir Lilienfeld
+        </Footer>
       </Layout>
     </div>
   );

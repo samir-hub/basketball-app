@@ -23,7 +23,7 @@ const TeamStats = () => {
     //     console.log(response);
     //     setDate(date);
     //   })
-  }, []);
+  }, [api]);
 
   let off_def_rating = data.map(e => {
      return {name: e.team_abbrev, off_rating: e.off_rating, def_rating: e.def_rating};

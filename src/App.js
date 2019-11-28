@@ -19,13 +19,13 @@ function App() {
     axios.get(playersApi).then(response => {
       setNamesAndIds(response.data);
     });
-  }, []);
+  }, [playersApi]);
 
   useEffect(() => {
     axios.get(teamsApi).then(response => {
       setTeamsAndIds(response.data);
     });
-  }, []);
+  }, [teamsApi]);
   return (
     <div className="app-container">
       <BrowserRouter>
