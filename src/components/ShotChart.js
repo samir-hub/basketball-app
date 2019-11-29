@@ -29,7 +29,7 @@ const ShotChart = (props) => {
     let season = "2020";
   // let jHarden = "201935";
 
-  let shotsApi = `https:stats.theseventhman.net/stats/api/v1/players/shots/?&season=${season}&player=${props.selected.selectedId}`;
+  let shotsApi = `https:stats.theseventhman.net/stats/api/v1/players/shots/?&season=${season}&player=201935`;
   
     useEffect(() => {
       axios.get(shotsApi).then(response => {
