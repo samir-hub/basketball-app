@@ -10,16 +10,26 @@ const { Footer } = Layout;
 const { Meta } = Card;
 
 const Home = () => {
+
+// // Detects if device is on iOS 
+// const isIos = () => {
+//   const userAgent = window.navigator.userAgent.toLowerCase();
+//   return /iphone|ipad|ipod/.test( userAgent );
+// }
+
+// Detects if device is in standalone mode
+const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
   return (
     <>
       <div className="main-div">
-        <div className="mobile-alert">
+        {!isInStandaloneMode && (<div className="mobile-alert">
           <Alert
             message="For a better experience, open this page in Safari, press the icon at the bottom center that looks like a box with an arrow coming out of it and press 'Add to Home Screen'. Enjoy the native app experience!"
             type="warning"
             closable
           />
-        </div>
+        </div>)}
 
         <div className="welcome-div">
           <img className="main-image" src={westbrook} alt="Pic" />
