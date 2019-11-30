@@ -1,106 +1,119 @@
-import React, { useState } from "react";
-import { Layout, Breadcrumb } from "antd";
+import React, { useState, useEffect } from "react";
+import "./MyTeam.css";
+import axios from "axios";
+import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import "antd/dist/antd.css";
-// import axios from "axios";
 import ShotChart from "./ShotChart";
-import "./PlayerStats.css";
 
-const { Content, Footer } = Layout;
+const { SubMenu } = Menu;
+const { Content, Sider, Footer} = Layout;
 
 const PlayerStats = props => {
-  // const [shotData, setShotData] = useState([
-  //   {
-  //     attempted: 1,
-  //     lg_attempted: 3,
-  //     lg_made: 1,
-  //     lg_x: -237,
-  //     lg_y: 8,
-  //     made: 1,
-  //     x: -237,
-  //     y: 8
-  //   }
-  // ]);
-  const [selected, setSelected] = useState({
-    selectedId: "201935",
-    selectedName: "James Harden"
+  const [data, setData] = useState([]);
+  const [favTeam, setFavTeam] = useState({
+    teamId: "1610612745",
+    teamName: "HOU"
+  });
+  const [chosen, setChosen] = useState(201935);
+
+  let api = `https://stats.theseventhman.net/stats/api/v1/players/?&season=2020`;
+
+  useEffect(() => {
+    axios.get(api).then(response => {
+      setData(response.data);
+    });
+  }, [api]);
+
+  let myPlayers = data.filter(e => {
+    if (e.teams === favTeam.teamName) {
+      return e.player_name;
+    }
+    return null;
   });
 
-  // let season = "2020";
-  // // let jHarden = "201935";
-
-  // let shotsApi = `https:stats.theseventhman.net/stats/api/v1/players/shots/?&season=${season}&player=${selected.selectedId}`;
-
-  // let player = props.realPlayer;
-  // console.log('THIS',player)
-
-  // useEffect(() => {
-  //   axios.get(shotsApi).then(response => {
-  //     console.log(response.data);
-  //     setShotData(response.data);
-  //   });
-  // }, [shotsApi]);
-
-  // let madeShots = shotData.map(e => {
-  //   return { x: e.x, y: e.y, z: e.lg_made };
-  // });
-
-  // let filteredMadeShots = madeShots.filter(function(e) {
-  //   if (e.z === 0) {
-  //     return false; // skip
-  //   }
-  //   return true;
-  // });
-
-  // let missedShots = shotData.map(e => {
-  //   return { x: e.x, y: e.y, z: e.lg_attempted - e.lg_made };
-  // });
-
-  // let filteredMissedShots = missedShots.filter(function(e) {
-  //   if (e.z === 0) {
-  //     return false; // skip
-  //   }
-  //   return true;
-  // });
-
-  const displayPlayers = () => {
-    var data = props.namesAndIds;
+  const displayTeams = () => {
+    var data = props.teamsAndIds;
     if (data.loading) {
       return <div>Loading players...</div>;
     } else {
-      return data.map((player, index) => {
+      return data.map((team, index) => {
         return (
-          <option key={index} value={player.player_id}>
+          <option
+            className="fav-team-options"
+            key={index}
+            value={team.team_name}
+          >
             {" "}
-            {player.player_name}{" "}
+            {team.abbreviation}{" "}
           </option>
         );
       });
     }
   };
 
-  console.log(selected);
+
+  console.log(chosen);
 
   return (
-    <div className="player-div">
+    <div>
       <Layout>
         <Layout>
-          <form className="select-form">
-            <div className="field">
-              <h1 className="select-title">Select a Player:</h1>
-              <select
-                onChange={e => setSelected({ selectedId: e.target.value })}
+          <Sider
+            breakpoint="lg"
+            collapsedWidth="0"
+            onBreakpoint={broken => {
+              console.log(broken);
+            }}
+            onCollapse={(collapsed, type) => {
+              console.log(collapsed, type);
+            }}
+            className="my-player-submenu"
+            style={{ background: "#fff" }}
+          >
+            <form className="select-team-form">
+              <div className="field">
+                <h1 className="select-title">Select Your Team:</h1>
+                <select
+                  onChange={e => setFavTeam({ teamName: e.target.value })}
+                >
+                  <option className="fav-team-placeholder">HOU</option>
+                  {displayTeams()}
+                </select>
+              </div>
+            </form>
+            <Menu
+              mode="inline"
+              defaultSelectedKeys={["1"]}
+              defaultOpenKeys={["sub1"]}
+              style={{ height: "100%", borderRight: 0 }}
+            >
+              <SubMenu
+                key="sub1"
+                title={
+                  <span>
+                    <Icon type="user" />
+                    Players
+                  </span>
+                }
               >
-                <option>Select player</option>
-                {displayPlayers()}
-              </select>
-            </div>
-          </form>
-
-          <Layout style={{ padding: "0 24px 24px" }}>
-            <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
-
+                {myPlayers.map((player, key) => {
+                  return (
+                    <Menu.Item
+                      className="my-player-names"
+                      key={key}
+                      onClick={() => setChosen(player.player_id)}
+                    >
+                      {player.player_name}
+                    </Menu.Item>
+                  );
+                })}
+              </SubMenu>
+            </Menu>
+          </Sider>
+          <Layout style={{ padding: "0 5px 5px" }}>
+            <Breadcrumb style={{ margin: "5px 0" }}></Breadcrumb>
             <Content
-              className="stylethis"
+            
               style={{
                 background: "#fff",
                 padding: 24,
@@ -108,16 +121,13 @@ const PlayerStats = props => {
                 minHeight: 280
               }}
             >
-              <ShotChart
-                selected={selected}
-                
-              />
+              <ShotChart chosen={chosen} />
             </Content>
-            <Footer style={{ textAlign: "center" }}>
-              Basketball Stats ©2019 Created by Samir Lilienfeld
-            </Footer>
           </Layout>
         </Layout>
+        <Footer style={{ textAlign: "center" }}>
+          Basketball Stats ©2019 Created by Samir Lilienfeld
+        </Footer>
       </Layout>
     </div>
   );

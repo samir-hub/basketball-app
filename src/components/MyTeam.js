@@ -52,21 +52,6 @@ const MyTeam = props => {
   };
 
 
-
-  // const [drawer, setDrawer] = useState({visible:false});
-
-  // const showDrawer = () => {
-  //   setDrawer({
-  //     visible: true,
-  //   });
-  // };
-
-  // const onClose = () => {
-  //   setDrawer({
-  //     visible: false,
-  //   });
-  // };
-
   console.log(chosen);
 
   return (
@@ -125,40 +110,6 @@ const MyTeam = props => {
               </SubMenu>
             </Menu>
           </Sider>
-
-          {/* <Button type="primary" onClick={()=>showDrawer}>
-          Open
-        </Button>
-        <Drawer
-          title="Basic Drawer"
-          placement="right"
-          closable={false}
-          onClose={()=>onClose()}
-          visible={drawer.visible}
-        >
-            <form className="select-team-form">
-              <div className="field">
-                <h1 className="select-title">Select Your Team:</h1>
-                <select
-                  onChange={e => setFavTeam({ teamName: e.target.value })}
-                >
-                  <option className="fav-team-placeholder">HOU</option>
-                  {displayTeams()}
-                </select>
-              </div>
-            </form>
-            {myPlayers.map((player, key) => {
-                  return (
-                    <Menu.Item
-                      className="my-player-names"
-                      key={key}
-                      onClick={() => setChosen(player.player_id)}
-                    >
-                      {player.player_name}
-                    </Menu.Item>
-                  );
-                })}
-        </Drawer> */}
           <Layout style={{ padding: "0 24px 24px" }}>
             <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
             <Content
@@ -170,7 +121,7 @@ const MyTeam = props => {
                 minHeight: 280
               }}
             >
-              <PlayerCard myPlayers={myPlayers} chosen={chosen} />
+              <PlayerCard chosen={chosen} />
             </Content>
           </Layout>
         </Layout>

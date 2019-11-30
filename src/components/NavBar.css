@@ -16,6 +16,12 @@
     font-size: 1.3rem;
 }
 
+.logo-nav {
+  /* height: 100px; 
+  width: 100px;
+  overflow: auto; */
+}
+
 @media only screen and (max-width: 600px) {
     .navlinks {
       flex-direction: column;
@@ -40,3 +46,5 @@
       border-bottom: none;
     }
   }
+
+ 

@@ -45,7 +45,7 @@ function App() {
           <Route
             path="/playerstats"
             render={props => (
-              <PlayerStats {...props} namesAndIds={namesAndIds} />
+              <PlayerStats {...props} teamsAndIds={teamsAndIds} namesAndIds={namesAndIds} />
             )}
           />
           <Route

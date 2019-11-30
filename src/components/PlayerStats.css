@@ -20,8 +20,9 @@
 
 @media only screen and (max-width: 600px) {
     .player-chart {
-      transform: scale(0.4);
-
+      transform: scale(0.45);
+      margin: 0 auto; 
+      width: 100%;
     }
   }
 
@@ -38,8 +39,20 @@
 
   @media only screen and (max-width: 600px) {
     .stylethis {
-      display: flex;
-      justify-content: center;
+     
 
     }
+  }
+
+  .sc-main-div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  
+  }
+
+  .shot-title {
+    font-size: 2rem;
+    text-align: center;
+    
   }

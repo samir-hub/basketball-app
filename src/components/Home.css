@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.cta-div {
+.desktop-home-card {
   width: 22%;
   display: flex;
   flex-direction: column;
@@ -23,10 +23,11 @@
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5),
     -1px -1px 30px rgba(0, 0, 0, 0.2);
-  background: #253442;
+  background: #001529;
   color: #C8D9EA;
-  height: 60vh;
-  padding: 30px;
+  
+  border: none;
+  font-size: 1.1rem;
 }
 
 .cta-div:hover {
@@ -37,7 +38,7 @@
 .cta-text{
     text-align: center;
     color: #C8D9EA;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .main-heading {
@@ -47,9 +48,7 @@
 }
 
 .cta-heading {
-  font-size: 2.3rem;
-  text-align: center;
-  color: #708090;
+  color: #77828C;
 }
 
 .input-title {
@@ -71,6 +70,17 @@
   color: darkslategrey;
 }
 
+.ant-card-meta-title{
+  font-size: 1.85rem;
+  color: #77828C;
+}
+
+.ant-card-meta-description{
+  color: #77828C;
+  font-size: 1.5rem;
+  padding: 20px 40px;
+}
+
 .main-image {
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5),
@@ -89,6 +99,10 @@
   color: #708090;
 }
 
+.mobile-home-card {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .welcome-div {
     display: none;
@@ -96,18 +110,15 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .cta-div {
-    width: 70%;
-    justify-content: center;
-    padding: 15px;
-    align-items: center;
+  .desktop-home-card {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .main-div {
     justify-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 
@@ -135,5 +146,41 @@
 @media only screen and (max-width: 600px) {
   .cta-favteam {
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-home-card {
+    display: block;
+    background: #001529;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5),
+    -1px -1px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ant-card-meta-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ant-card-meta-description {
+    font-size: 1rem;
+    padding: 10px 20px;
+    
+  }
+}
+
+.mobile-alert {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-alert {
+    display: block;
+    
   }
 }
