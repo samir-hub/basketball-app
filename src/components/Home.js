@@ -20,10 +20,11 @@ const Home = () => {
 // Detects if device is in standalone mode
 const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
+
   return (
     <>
       <div className="main-div">
-        {!isInStandaloneMode && (<div className="mobile-alert">
+        {!isInStandaloneMode() && (<div className="mobile-alert">
           <Alert
             message="For a better experience, open this page in Safari, press the icon at the bottom center that looks like a box with an arrow coming out of it and press 'Add to Home Screen'. Enjoy the native app experience!"
             type="warning"
