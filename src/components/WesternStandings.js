@@ -3,13 +3,22 @@ import { Table } from "antd";
 // import "./TeamStats.css";
 
 const WesternStandings = props => {
+  let pctNumbers = props.western_conf.map(e => {
+    return e.wins - (e.gp-e.wins);
+  });
+
+  let arr = Object.values(pctNumbers);
+
+  let max = Math.max(...arr);
+
   let formattedWestern = props.western_conf.map((e, index) => {
     return {
       key: index,
       team: e.team,
       wins: e.wins,
       losses: e.gp - e.wins,
-      pct: ((e.wins / e.gp).toFixed(4)),
+      gb: (max-(e.wins - (e.gp-e.wins)))/2,
+      pct: (e.wins / e.gp).toFixed(4),
       ppg: e.points,
       oppg: e.points_against,
       diff: (e.points - e.points_against).toFixed(1)
@@ -18,8 +27,8 @@ const WesternStandings = props => {
 
   function compare(a, b) {
     // Use toUpperCase() to ignore character casing
-    const teamA = a.wins;
-    const teamB = b.wins;
+    const teamA = a.pct;
+    const teamB = b.pct;
 
     let comparison = 0;
     if (teamA > teamB) {
@@ -49,6 +58,11 @@ const WesternStandings = props => {
       key: "losses"
     },
     {
+      title: "GB",
+      dataIndex: "gb",
+      key: "gb",
+    },
+    {
       title: "PCT",
       dataIndex: "pct",
       key: "pct"
@@ -72,11 +86,13 @@ const WesternStandings = props => {
 
   const data = sortedData;
 
+  console.log("this", max)
+
   return (
     <div className="standings-div">
       <div className="second-standings-div">
         <h1 className="standings-main-heading">Western Conference</h1>
-        <Table pagination={false} columns={columns} dataSource={data} />
+        <Table size={"small"} pagination={false} columns={columns} dataSource={data} />
       </div>
     </div>
   );

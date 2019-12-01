@@ -15,3 +15,13 @@
   .eastern-standings {
       margin-bottom: 30px;
   }
+
+  
+
+  .ant-table-row:nth-child(-n+8) {
+    background: #d2f8d2;
+  }
+
+  td:nth-child(4) {
+    background: #e8f4f8;
+  }
