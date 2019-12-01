@@ -1,59 +1,220 @@
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import "./TeamStats.css";
+import TeamEfficiency from "./TeamEfficiency";
+import AdvancedDefense from "./AdvancedDefense";
+import FooterComp from "./FooterComp";
+import AdvancedShooting from "./AdvancedShooting";
+import PossessionBoxScore from "./PossessionBoxScore";
+import PossessionShooting from "./PossessionShooting";
+import PossessionDefense from "./PossessionDefense";
+
+const { SubMenu } = Menu;
+const { Content, Sider } = Layout;
 
 const TeamStats = () => {
+  const [showEff, setShowEff] = useState(true);
+  const [showAdvDef, setShowAdvDef] = useState(false);
+  const [showAdvShooting, setShowAdvShooting] = useState(false);
+  const [showPosBoxScore, setShowPosBoxScore] = useState(false);
+  const [showPosShooting, setShowPosShooting] = useState(false);
+  const [showPosDef, setShowPosDef] = useState(false);
 
-  const [data, setData] = useState([]);
+  const [advancedData, setAdvancedData] = useState([]);
 
-  let api = `https://stats.theseventhman.net/stats/api/v1/teams/advanced/?&season=2020`
+  let advancedApi = `https://stats.theseventhman.net/stats/api/v1/teams/advanced/?&season=2020`;
 
   useEffect(() => {
-    axios
-      .get(api)
-      .then(response => {
-        console.log(response.data);
-        setData(response.data);
-      })
+    axios.get(advancedApi).then(response => {
+      console.log(response.data);
+      setAdvancedData(response.data);
+    });
     //   .then(response => {
     //     const date = response.data.date;
     //     console.log(response);
     //     setDate(date);
     //   })
-  }, [api]);
+  }, [advancedApi]);
 
-  let off_def_rating = data.map(e => {
-     return {name: e.team_abbrev, off_rating: e.off_rating, def_rating: e.def_rating};
-  })
+  const [possessionData, setPossessionData] = useState([]);
 
-  console.log(off_def_rating)
+  let possessionApi = `https://stats.theseventhman.net/stats/api/v1/teams/possession/?&season=2020`;
+
+  useEffect(() => {
+    axios.get(possessionApi).then(response => {
+      console.log(response.data);
+      setPossessionData(response.data);
+    });
+    //   .then(response => {
+    //     const date = response.data.date;
+    //     console.log(response);
+    //     setDate(date);
+    //   })
+  }, [possessionApi]);
+
   return (
     <div className="team-div">
-      <div className="second-team-div">
-        <h1 className="team-main-heading">Offensive and Defensive Efficiency By Team:</h1>
-      </div>
-      <LineChart
-        className="team-chart"
-        width={1500}
-        height={500}
-        data={off_def_rating}
-        margin={{
-          top: 15, right: 30, left: 20, bottom: 15,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name"  />
-        <YAxis domain={['dataMin', 'dataMax']} />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="off_rating" stroke="#2f4f4f" activeDot={{ r: 6 }} />
-        <Line type="monotone" dataKey="def_rating" stroke="#de733f" activeDot={{ r: 6 }}/>
-      </LineChart>
+      <Layout>
+        <Layout className="layout-container" >
+          <Sider
+            breakpoint="lg"
+            collapsedWidth="0"
+            onBreakpoint={broken => {
+              console.log(broken);
+            }}
+            onCollapse={(collapsed, type) => {
+              console.log(collapsed, type);
+            }}
+            className="my-player-submenu"
+            style={{ background: "#fff" }}
+          >
+            <Menu
+              mode="inline"
+              defaultSelectedKeys={["0"]}
+              defaultOpenKeys={["sub1"]}
+              style={{ height: "100%", borderRight: 0 }}
+            >
+              <SubMenu
+                key="sub1"
+                title={
+                  <span>
+                    <Icon type="rocket" />
+                    Advanced Stats
+                  </span>
+                }
+              >
+                <Menu.Item
+                  className="my-player-names"
+                  key="menuitem1"
+                  onClick={() => {
+                    setShowPosBoxScore(false);
+                    setShowEff(true);
+                    setShowAdvDef(false);
+                    setShowAdvShooting(false);
+                    setShowPosDef(false);
+                    setShowPosShooting(false);
+                  }}
+                >
+                  Team Efficiency
+                </Menu.Item>
+                <Menu.Item
+                  className="my-player-names"
+                  key="menuitem2"
+                  onClick={() => {
+                    setShowPosBoxScore(false);
+                    setShowEff(false);
+                    setShowAdvDef(true);
+                    setShowAdvShooting(false);
+                    setShowPosDef(false);
+                    setShowPosShooting(false);
+                  }}
+                >
+                  Defensive Pressure
+                </Menu.Item>
+                <Menu.Item
+                  className="my-player-names"
+                  key="menuitem3"
+                  onClick={() => {
+                    setShowPosBoxScore(false);
+                    setShowEff(false);
+                    setShowAdvDef(false);
+                    setShowAdvShooting(true);
+                    setShowPosDef(false);
+                    setShowPosShooting(false);
+                  }}
+                >
+                  Advanced Shooting
+                </Menu.Item>
+              </SubMenu>
+
+              <SubMenu
+                key="sub2"
+                title={
+                  <span>
+                    <Icon type="skin" />
+                    Stats Per 100 Possessions
+                  </span>
+                }
+              >
+                <Menu.Item
+                  className="my-player-names"
+                  key="menuitem4"
+                  onClick={() => {
+                    setShowPosBoxScore(true);
+                    setShowAdvDef(false);
+                    setShowEff(false);
+                    setShowAdvShooting(false);
+                    setShowPosDef(false);
+                    setShowPosShooting(false);
+                  }}
+                >
+                  Basic Box Score
+                </Menu.Item>
+                <Menu.Item
+                  className="my-player-names"
+                  key="menuitem5"
+                  onClick={() => {
+                    setShowEff(false);
+                    setShowAdvDef(false);
+                    setShowAdvShooting(false);
+                    setShowPosBoxScore(false);
+                    setShowPosShooting(true);
+                    setShowPosDef(false);
+                  }}
+                >
+                  Shooting
+                </Menu.Item>
+                <Menu.Item
+                  className="my-player-names"
+                  key="menuitem6"
+                  onClick={() => {
+                    setShowEff(false);
+                    setShowAdvDef(false);
+                    setShowAdvShooting(false);
+                    setShowPosBoxScore(false);
+                    setShowPosShooting(false);
+                    setShowPosDef(true);
+                  }}
+                >
+                  Defensive Pressure
+                </Menu.Item>
+              </SubMenu>
+            </Menu>
+          </Sider>
+          <Layout style={{ padding: "0 24px 24px" }}>
+            <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
+            <Content
+            className="chart-container"
+              style={{
+                background: "#fff",
+                padding: 24,
+                margin: 0,
+                minHeight: 280
+              }}
+            >
+              
+              {showEff && <TeamEfficiency advancedData={advancedData} />}
+              {showAdvDef && <AdvancedDefense advancedData={advancedData} />}
+              {showAdvShooting && (
+                <AdvancedShooting advancedData={advancedData} />
+              )}
+              {showPosBoxScore && (
+                <PossessionBoxScore possessionData={possessionData} />
+              )}
+              {showPosShooting && (
+                <PossessionShooting possessionData={possessionData} />
+              )}
+              {showPosDef && (
+                <PossessionDefense possessionData={possessionData} />
+              )}
+          
+            </Content>
+          </Layout>
+        </Layout>
+        <FooterComp />
+      </Layout>
     </div>
-    
   );
 };
 

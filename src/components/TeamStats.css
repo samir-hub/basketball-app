@@ -1,4 +1,4 @@
-.team-div{
+/* .team-div{
     background: slategrey;
     display: flex;
     flex-direction: column;
@@ -25,5 +25,25 @@
   @media only screen and (max-width: 600px) {
     .team-div {
       justify-content: flex-end;
+    }
+  } */
+
+  
+
+  @media only screen and (max-width: 600px) {
+    .team-chart {
+      width: 1300px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .chart-container {
+      width: 1350px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .layout-container {
+      width: 1350px;
     }
   }

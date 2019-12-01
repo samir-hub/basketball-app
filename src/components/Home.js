@@ -3,10 +3,10 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import westbrook from "./westbrook.jpg";
 // import avatar from './tbs_avatar_logo.png';
-import { Layout, Icon, Card, Alert } from "antd";
+import { Icon, Card, Alert } from "antd";
 import "antd/dist/antd.css";
+import FooterComp from "./FooterComp";
 
-const { Footer } = Layout;
 const { Meta } = Card;
 
 const Home = () => {
@@ -35,35 +35,29 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
         <div className="welcome-div">
           <img className="main-image" src={westbrook} alt="Pic" />
         </div>
-        {/* <div className="cta-div">
-          <h1 className="cta-heading">Basketball Stats</h1>
-          <h2 className="cta-text">
-            Welcome to Basketball Stats. You can check out your favorite team's
-            stats or see how your favorite player is faring this season.
-          </h2>
-        </div> */}
         <Card
           className="desktop-home-card"
           style={{ width: 400 }}
           actions={[
             <Link to="/myteam">
-              <Icon type="star" key="star" />
+              <Icon type="user" key="user" />
+            </Link>,
+            <Link to="/standings">
+              <Icon type="profile" key="profile" />
             </Link>,
             <Link to="/playerstats">
               <Icon type="dot-chart" key="dot-chart" />
-            </Link>,
-            <Link to="/teamstats">
-              <Icon type="bar-chart" key="bar-chart" />
             </Link>
           ]}
         >
+          <h2 className="cta-heading">Welcome to theballscreen</h2>
           <Meta
-            className="cta-heading"
+            
             // avatar={
             //   <Avatar src={avatar} />
             // }
-            title="Welcome to theballscreen"
-            description="Check out in-depth stats for your favorite team, see updated shot charts for any player or compare teams across the league."
+            title="The site dedicated to live NBA stats"
+            description="Check out individual player stats, full league standings or see updated shot charts for any player."
           />
         </Card>
 
@@ -73,25 +67,24 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
           cover={<img alt="example" src={westbrook} />}
           actions={[
             <Link to="/myteam">
-              <Icon type="star" key="star" />
+              <Icon type="user" key="user" />
+            </Link>,
+            <Link to="/standings">
+              <Icon type="profile" key="profile" />
             </Link>,
             <Link to="/playerstats">
               <Icon type="dot-chart" key="dot-chart" />
-            </Link>,
-            <Link to="/teamstats">
-              <Icon type="bar-chart" key="bar-chart" />
             </Link>
           ]}
         >
+          <h2 className="cta-heading">Welcome to theballscreen</h2>
           <Meta
-            title="Welcome to theballscreen"
-            description="Check out in-depth stats for your favorite team, see updated shot charts for any player or compare teams across the league."
+            title="The site dedicated to live NBA stats"
+            description="Check out individual player stats, full league standings or see updated shot charts for any player."
           />
         </Card>
       </div>
-      <Footer style={{ textAlign: "center" }}>
-        Basketball Stats ©2019 Created by Samir Lilienfeld
-      </Footer>
+      <FooterComp/>
     </>
   );
 };

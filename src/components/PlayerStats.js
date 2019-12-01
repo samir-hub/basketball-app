@@ -4,9 +4,10 @@ import axios from "axios";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import "antd/dist/antd.css";
 import ShotChart from "./ShotChart";
+import FooterComp from "./FooterComp";
 
 const { SubMenu } = Menu;
-const { Content, Sider, Footer} = Layout;
+const { Content, Sider } = Layout;
 
 const PlayerStats = props => {
   const [data, setData] = useState([]);
@@ -72,7 +73,7 @@ const PlayerStats = props => {
           >
             <form className="select-team-form">
               <div className="field">
-                <h1 className="select-title">Select Your Team:</h1>
+                <h1 className="select-title">Select a Team:</h1>
                 <select
                   onChange={e => setFavTeam({ teamName: e.target.value })}
                 >
@@ -125,9 +126,7 @@ const PlayerStats = props => {
             </Content>
           </Layout>
         </Layout>
-        <Footer style={{ textAlign: "center" }}>
-          Basketball Stats ©2019 Created by Samir Lilienfeld
-        </Footer>
+        <FooterComp/>
       </Layout>
     </div>
   );

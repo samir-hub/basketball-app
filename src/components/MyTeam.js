@@ -4,9 +4,10 @@ import axios from "axios";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import "antd/dist/antd.css";
 import PlayerCard from "./PlayerCard";
+import FooterComp from "./FooterComp";
 
 const { SubMenu } = Menu;
-const { Content, Sider, Footer} = Layout;
+const { Content, Sider} = Layout;
 
 const MyTeam = props => {
   const [data, setData] = useState([]);
@@ -83,7 +84,7 @@ const MyTeam = props => {
             </form>
             <Menu
               mode="inline"
-              defaultSelectedKeys={["1"]}
+              defaultSelectedKeys={["8"]}
               defaultOpenKeys={["sub1"]}
               style={{ height: "100%", borderRight: 0 }}
             >
@@ -125,9 +126,7 @@ const MyTeam = props => {
             </Content>
           </Layout>
         </Layout>
-        <Footer style={{ textAlign: "center" }}>
-          Basketball Stats ©2019 Created by Samir Lilienfeld
-        </Footer>
+        <FooterComp/>
       </Layout>
     </div>
   );

@@ -49,6 +49,7 @@
 
 .cta-heading {
   color: #77828C;
+  font-size: 1.85rem;
 }
 
 .input-title {
@@ -71,13 +72,13 @@
 }
 
 .ant-card-meta-title{
-  font-size: 1.85rem;
-  color: #77828C;
+  font-size: 1.2rem;
+  color: gainsboro;
 }
 
 .ant-card-meta-description{
   color: #77828C;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   padding: 20px 40px;
 }
 
@@ -125,14 +126,14 @@
 @media only screen and (max-width: 600px) {
   .cta-heading {
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .input-title {
     margin-top: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -162,7 +163,8 @@
 
 @media only screen and (max-width: 600px) {
   .ant-card-meta-title {
-    font-size: 1.3rem;
+    font-size: .9rem;
+    padding: 10px 0 0 0;
   }
 }
 

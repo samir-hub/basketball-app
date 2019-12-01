@@ -7,6 +7,7 @@ import TeamStats from "./components/TeamStats";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PlayerStats from "./components/PlayerStats";
 import MyTeam from "./components/MyTeam";
+import Standings from "./components/Standings";
 
 function App() {
   const [namesAndIds, setNamesAndIds] = useState([]);
@@ -52,6 +53,12 @@ function App() {
             path="/myteam"
             render={props => (
               <MyTeam {...props} teamsAndIds={teamsAndIds} />
+            )}
+          />
+            <Route
+            path="/standings"
+            render={props => (
+              <Standings {...props} teamsAndIds={teamsAndIds} />
             )}
           />
         </Switch>

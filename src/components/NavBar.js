@@ -86,10 +86,6 @@ function NavBar() {
           <Menu.Item key="mail">
             <Link to="/">Home</Link>
           </Menu.Item>
-
-          <Menu.Item key="alipay">
-            <Link to="/myteam">My Team</Link>
-          </Menu.Item>
           <SubMenu
             title={
               <span className="submenu-title-wrapper">
@@ -102,9 +98,9 @@ function NavBar() {
               <Menu.Item key="setting:1">
                 <Link to="/playerstats">Shot Charts</Link>
               </Menu.Item>
-              {/* <Menu.Item key="setting:2">Per Possession Stats</Menu.Item>
-              <Menu.Item key="setting:2">Per Game Stats</Menu.Item>
-              <Menu.Item key="setting:2">Season Leaders</Menu.Item> */}
+              <Menu.Item key="setting:2">
+                <Link to="/myteam">Per Game Stats</Link>
+              </Menu.Item>
             </Menu.ItemGroup>
           </SubMenu>
           <SubMenu
@@ -116,7 +112,10 @@ function NavBar() {
             }
           >
             <Menu.ItemGroup title="Team Stats">
-              <Menu.Item key="setting:3">
+            <Menu.Item key="setting:3">
+                <Link to="/standings">Standings</Link>
+              </Menu.Item>
+              <Menu.Item key="setting:4">
                 <Link to="/teamstats">Team Comparisons</Link>
               </Menu.Item>
               {/* <Menu.Item key="setting:4">Per Possession Stats</Menu.Item>

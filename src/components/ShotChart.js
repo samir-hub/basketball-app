@@ -15,18 +15,7 @@ import {
 import "antd/dist/antd.css";
 
 const ShotChart = props => {
-  const [newData, setNewData] = useState([
-    {
-      attempted: 1,
-      lg_attempted: 3,
-      lg_made: 1,
-      lg_x: -237,
-      lg_y: 8,
-      made: 1,
-      x: -237,
-      y: 8
-    }
-  ]);
+  const [newData, setNewData] = useState([]);
 
   let season = "2020";
   // let jHarden = "201935";
@@ -84,6 +73,8 @@ const ShotChart = props => {
               .filter(function(e) {
                 if (e.z === 0) {
                   return false; // skip
+                }else if (e.y > 350){
+                  return false; //skip
                 }
                 return true;
               })}
@@ -99,6 +90,8 @@ const ShotChart = props => {
               .filter(function(e) {
                 if (e.z === 0) {
                   return false; // skip
+                } else if (e.y > 350){
+                  return false; //skip
                 }
                 return true;
               })}
