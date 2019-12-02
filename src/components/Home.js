@@ -6,6 +6,7 @@ import westbrook from "./westbrook.jpg";
 import { Icon, Card, Alert } from "antd";
 import "antd/dist/antd.css";
 import FooterComp from "./FooterComp";
+import OfflineNotification from "./OfflineNotification";
 
 const { Meta } = Card;
 
@@ -24,6 +25,7 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
   return (
     <>
       <div className="main-div">
+        <OfflineNotification/>
         {!isInStandaloneMode() && (<div className="mobile-alert">
           <Alert
             message="For a better experience, open this page in Safari, press the Action menu at the bottom center and press 'Add to Home Screen'. Enjoy!"
