@@ -15,7 +15,7 @@ const PossessionShooting = (props) => {
   return (
     <>
       <div className="second-team-div">
-        <h1 className="team-main-heading">Shooting Per 100 Possessions</h1>
+        <h1 className="team-main-heading">FG Made/FG Missed and Threes Made/Threes Missed per 100 Possessions by Team</h1>
         <BarChart
         className="team-chart"
         width={1300}

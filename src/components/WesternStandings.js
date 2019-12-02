@@ -41,11 +41,23 @@ const WesternStandings = props => {
 
   let sortedData = formattedWestern.sort(compare);
 
+  let addPos = sortedData.map((e, index)=> {
+    e.pos = index + 1;
+    return e; 
+  })
+
   const columns = [
+    {
+      title: "POS",
+      dataIndex: "pos",
+      key: "pos",
+     
+    },
     {
       title: "Team",
       dataIndex: "team",
-      key: "team"
+      key: "team",
+   
     },
     {
       title: "W",
@@ -84,7 +96,9 @@ const WesternStandings = props => {
     }
   ];
 
-  const data = sortedData;
+  const data = addPos;
+
+  
 
   console.log("this", max)
 
@@ -92,7 +106,7 @@ const WesternStandings = props => {
     <div className="standings-div">
       <div className="second-standings-div">
         <h1 className="standings-main-heading">Western Conference</h1>
-        <Table size={"small"} pagination={false} columns={columns} dataSource={data} />
+        <Table scroll={{ x: 'calc(400px + 50%)'}} size={"small"} pagination={false} columns={columns} dataSource={data} />
       </div>
     </div>
   );

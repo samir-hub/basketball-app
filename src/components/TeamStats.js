@@ -133,7 +133,7 @@ const TeamStats = () => {
                 title={
                   <span>
                     <Icon type="skin" />
-                    Per 100 Possessions
+                    Per 100 Poss.
                   </span>
                 }
               >
@@ -212,7 +212,7 @@ const TeamStats = () => {
             </Content>
           </Layout>
         </Layout>
-        <FooterComp />
+        <FooterComp/>
       </Layout>
     </div>
   );

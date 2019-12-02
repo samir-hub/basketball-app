@@ -24,7 +24,7 @@ const PlayerCard = props => {
           return (
             <Row key={key} gutter={16}>
               <h1 className="my-player-name">{stat.player_name}</h1>
-              <p>Stats Per Game</p>
+              <p>Per Game</p>
               <Col span={8}>
                 <Statistic title="Pts" value={stat.points} precision={2} />
               </Col>

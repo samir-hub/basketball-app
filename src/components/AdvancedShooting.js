@@ -16,7 +16,7 @@ const AdvancedShooting = (props) => {
   return (
     <>
       <div className="second-team-div">
-        <h1 className="team-main-heading">Advanced Shooting</h1>
+        <h1 className="team-main-heading">eFG% and TS% by Team</h1>
         <BarChart
         className="team-chart"
         width={1300}

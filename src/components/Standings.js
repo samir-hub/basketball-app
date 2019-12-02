@@ -6,6 +6,7 @@ import EasternStandings from "./EasternStandings";
 import WesternStandings from "./WesternStandings";
 import FooterComp from "./FooterComp";
 
+
 const { Content } = Layout;
 
 const Standings = () => {
@@ -89,6 +90,7 @@ const Standings = () => {
           >
             <EasternStandings  eastern_conf={eastern_conf} />
             <WesternStandings western_conf={western_conf} />
+        
           </Content>
         </Layout>
         <FooterComp/>

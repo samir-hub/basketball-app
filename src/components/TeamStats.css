@@ -1,34 +1,3 @@
-/* .team-div{
-    background: slategrey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 90vh;
-}
-
-.team-main-heading{
-    color: #f1f1e6;
-}
-
-.team-chart{
-    background: #f1f1e6;
-}
-
-@media only screen and (max-width: 600px) {
-    .team-chart {
-      transform: scale(0.3);
-      position: absolute;
-      top: 50;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .team-div {
-      justify-content: flex-end;
-    }
-  } */
-
-  
 
   @media only screen and (max-width: 600px) {
     .team-chart {

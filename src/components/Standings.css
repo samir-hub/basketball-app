@@ -1,5 +1,5 @@
 
-
+/* 
   @media only screen and (max-width: 600px) {
     .standings-layout {
       width: 600px;
@@ -10,7 +10,7 @@
     .standings-container {
       width: 600px;
     }
-  }
+  } */
 
   .eastern-standings {
       margin-bottom: 30px;
@@ -22,6 +22,8 @@
     background: #d2f8d2;
   }
 
-  td:nth-child(4) {
+  td:nth-child(5) {
     background: #e8f4f8;
   }
+
+  

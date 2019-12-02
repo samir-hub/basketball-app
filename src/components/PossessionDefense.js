@@ -15,7 +15,7 @@ const PossessionDefense = (props) => {
   return (
     <>
       <div className="second-team-div">
-        <h1 className="team-main-heading">Defensive Pressure</h1>
+        <h1 className="team-main-heading">Steals and Blocks Per 100 Possessions by Team</h1>
         <BarChart
         className="team-chart"
         width={1300}

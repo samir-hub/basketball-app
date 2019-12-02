@@ -16,7 +16,7 @@ const TeamEfficiency = (props) => {
   return (
     <>
       <div className="second-team-div">
-        <h1 className="team-main-heading">Offensive and Defensive Efficiency By Team:</h1>
+        <h1 className="team-main-heading">Offensive and Defensive Efficiency by Team:</h1>
       </div>
      
       <LineChart
