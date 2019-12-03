@@ -24,7 +24,7 @@ const EasternStandings = props => {
       wins: e.wins,
       losses: e.gp - e.wins,
       gb: (max-(e.wins - (e.gp-e.wins)))/2,
-      pct: ((e.wins / e.gp).toFixed(4)),
+      pct: ((e.wins / e.gp).toFixed(3)),
       ppg: e.points,
       oppg: e.points_against,
       diff: (e.points - e.points_against).toFixed(1)
