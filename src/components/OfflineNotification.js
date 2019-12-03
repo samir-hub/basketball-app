@@ -8,7 +8,7 @@ const OfflineNotification = () => {
       <div className="offline-div">
         {!navigator.onLine && (
           <div className="mobile-alert">
-            <Alert message="You are offline." type="warning" closable />
+            <Alert message="You are offline.   " type="warning" closable />
           </div>
         )}
       </div>
