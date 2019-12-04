@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Layout, Menu, Breadcrumb, Icon } from "antd";
+
+import Icon from 'antd/es/icon';
+// import 'antd/es/icon/style/css';
+import Menu from 'antd/es/menu'
+// import 'antd/es/menu/style/css'
+import Layout from 'antd/es/layout'
+// import 'antd/es/layout/style/css'
+import Breadcrumb from 'antd/es/breadcrumb'
+// import 'antd/es/breadcrumb/style/css'
+
 import "./TeamStats.css";
 import TeamEfficiency from "./TeamEfficiency";
 import AdvancedDefense from "./AdvancedDefense";
@@ -30,11 +39,6 @@ const TeamStats = () => {
       console.log(response.data);
       setAdvancedData(response.data);
     });
-    //   .then(response => {
-    //     const date = response.data.date;
-    //     console.log(response);
-    //     setDate(date);
-    //   })
   }, [advancedApi]);
 
   const [possessionData, setPossessionData] = useState([]);
@@ -46,11 +50,6 @@ const TeamStats = () => {
       console.log(response.data);
       setPossessionData(response.data);
     });
-    //   .then(response => {
-    //     const date = response.data.date;
-    //     console.log(response);
-    //     setDate(date);
-    //   })
   }, [possessionApi]);
 
   return (

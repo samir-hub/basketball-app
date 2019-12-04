@@ -3,14 +3,14 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import westbrook from "./westbrook.jpg";
 // import avatar from './tbs_avatar_logo.png';
-import { Icon, Card, Alert } from "antd";
-import "antd/dist/antd.css";
-// import Icon from 'antd/es/icon';
-// import 'antd/es/icon/style/css';
-// import Card from 'antd/es/card'
-// import 'antd/es/card/style/css'
-// import Alert from 'antd/es/alert'
-// import 'antd/es/alert/style/css'
+// import { Icon, Card, Alert } from "antd";
+// import "antd/dist/antd.css";
+import Icon from 'antd/es/icon';
+
+import Card from 'antd/es/card'
+
+import Alert from 'antd/es/alert'
+
 import FooterComp from "./FooterComp";
 import OfflineNotification from "./OfflineNotification";
 

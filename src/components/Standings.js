@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Layout, Breadcrumb } from "antd";
+
+import Layout from 'antd/es/layout'
+
+import Breadcrumb from 'antd/es/breadcrumb'
+
+
 import "./Standings.css";
 import EasternStandings from "./EasternStandings";
 import WesternStandings from "./WesternStandings";

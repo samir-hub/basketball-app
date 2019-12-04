@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./MyTeam.css";
 import axios from "axios";
-import { Layout, Menu, Breadcrumb, Icon } from "antd";
-import "antd/dist/antd.css";
+
+import Icon from 'antd/es/icon';
+// import 'antd/es/icon/style/css';
+import Menu from 'antd/es/menu'
+// import 'antd/es/menu/style/css'
+import Layout from 'antd/es/layout'
+// import 'antd/es/layout/style/css'
+import Breadcrumb from 'antd/es/breadcrumb'
+// import 'antd/es/breadcrumb/style/css'
+
 import PlayerCard from "./PlayerCard";
 import FooterComp from "./FooterComp";
 

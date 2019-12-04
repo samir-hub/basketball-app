@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Card, Row, Col, Statistic } from "antd";
+
+
+import Card from 'antd/es/card'
+
+import Row from 'antd/es/row'
+
+import Col from 'antd/es/col'
+
+import Statistic from 'antd/es/statistic'
+
+
 import axios from "axios";
-import "antd/dist/antd.css";
+
 import "./PlayerCard.css";
 
 const PlayerCard = props => {

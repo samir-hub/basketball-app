@@ -12,7 +12,6 @@ import {
   Tooltip,
   Legend
 } from "recharts";
-import "antd/dist/antd.css";
 
 const ShotChart = props => {
   const [newData, setNewData] = useState([]);
