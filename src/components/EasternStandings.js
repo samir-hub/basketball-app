@@ -1,5 +1,6 @@
 import React from "react";
-import { Table } from "antd";
+import Table from 'antd/es/table'
+import 'antd/es/table/style/css'
 import "./Standings.css";
 // import {HeartIcon} from './Icons';
 // import {PandaIcon} from './Icons';

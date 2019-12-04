@@ -1,6 +1,7 @@
 import React from "react";
-import { Alert } from "antd";
-import "antd/dist/antd.css";
+
+
+import Alert from 'antd/es/alert'
 
 const OfflineNotification = () => {
   return (

@@ -3,11 +3,11 @@ import "./NavBar.css";
 // import logo from "./tbs_full_logo.png";
 import { Link } from "react-router-dom";
 import Icon from 'antd/es/icon';
-// import 'antd/es/icon/style/css';
+import 'antd/es/icon/style/css';
 import Menu from 'antd/es/menu'
-// import 'antd/es/menu/style/css'
+import 'antd/es/menu/style/css'
 import Layout from 'antd/es/layout'
-// import 'antd/es/layout/style/css'
+import 'antd/es/layout/style/css'
 
 
 const { SubMenu } = Menu;

@@ -4,10 +4,13 @@ import React, { useState, useEffect } from "react";
 import Card from 'antd/es/card'
 
 import Row from 'antd/es/row'
+import 'antd/es/row/style/css'
 
 import Col from 'antd/es/col'
+import 'antd/es/col/style/css'
 
 import Statistic from 'antd/es/statistic'
+import 'antd/es/statistic/style/css'
 
 
 import axios from "axios";

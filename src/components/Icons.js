@@ -1,5 +1,7 @@
 import React from 'react';
-import { Icon } from 'antd';
+
+
+import Icon from 'antd/es/icon'
 
 const HeartSvg = () => (
   <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 1024 1024">

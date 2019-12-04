@@ -6,11 +6,11 @@ import westbrook from "./westbrook.jpg";
 // import { Icon, Card, Alert } from "antd";
 // import "antd/dist/antd.css";
 import Icon from 'antd/es/icon';
-
+import 'antd/es/icon/style/css'
 import Card from 'antd/es/card'
-
+import 'antd/es/card/style/css'
 import Alert from 'antd/es/alert'
-
+import 'antd/es/alert/style/css'
 import FooterComp from "./FooterComp";
 import OfflineNotification from "./OfflineNotification";
 
@@ -64,7 +64,7 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
             // avatar={
             //   <Avatar src={avatar} />
             // }
-            title="The site dedicated to live NBA stats"
+            title="The site dedicated to live NBA stats."
             description="Check out individual player stats, full league standings or see updated shot charts for any player."
           />
         </Card>
