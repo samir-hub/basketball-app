@@ -35,6 +35,7 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
         <div className="welcome-div">
           <img className="main-image" src={westbrook} alt="Pic" />
         </div>
+        <div className="card-div">
         <Card
           className="desktop-home-card"
           style={{ width: 400 }}
@@ -60,7 +61,7 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
             description="Check out individual player stats, full league standings or see updated shot charts for any player."
           />
         </Card>
-
+        </div>
         <Card
           className="mobile-home-card"
           style={{ width: 300 }}

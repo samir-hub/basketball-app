@@ -2,17 +2,22 @@
   background: slategrey;
   height: 90vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .welcome-div {
-  width: 40%;
+  width: 50%;
   height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.card-div{
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .desktop-home-card {
