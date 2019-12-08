@@ -8,6 +8,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PlayerStats from "./components/PlayerStats";
 import MyTeam from "./components/MyTeam";
 import Standings from "./components/Standings";
+import MobileNavBar from "./components/MobileNavBar";
+// import TabBarComp from './components/TabBarComp';
 
 function App() {
   const [namesAndIds, setNamesAndIds] = useState([]);
@@ -31,7 +33,7 @@ function App() {
     <div className="app-container">
       <BrowserRouter>
         <header>
-          <NavBar />
+          <NavBar className="desktop-navbar" />
         </header>
         <Switch>
           <Route
@@ -62,6 +64,9 @@ function App() {
             )}
           />
         </Switch>
+        <footer>
+          <MobileNavBar className="mobile-navbar"/>
+        </footer>
       </BrowserRouter>
     </div>
   );

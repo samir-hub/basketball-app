@@ -31,15 +31,7 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
   return (
     <>
       <div className="main-div">
-        <OfflineNotification/>
-        {!isInStandaloneMode() && (<div className="mobile-alert">
-          <Alert
-            message="For a better experience, open this page in Safari, press the Action menu at the bottom center and press 'Add to Home Screen'. Enjoy!"
-            type="warning"
-            closable
-          />
-        </div>)}
-
+      
         <div className="welcome-div">
           <img className="main-image" src={westbrook} alt="Pic" />
         </div>
@@ -87,10 +79,19 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
         >
           <h2 className="cta-heading">Welcome to theballscreen</h2>
           <Meta
-            title="The site dedicated to live NBA stats"
+          
             description="Check out individual player stats, full league standings or see updated shot charts for any player."
           />
         </Card>
+        <OfflineNotification/>
+        {!isInStandaloneMode() && (<div className="mobile-alert">
+          <Alert
+            message="For a better experience, open this page in Safari, press the Action menu at the bottom center and press 'Add to Home Screen'. Enjoy!"
+            type="warning"
+            closable
+          />
+        </div>)}
+
       </div>
       <FooterComp/>
     </>

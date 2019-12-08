@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./NavBar.css";
+
 // import logo from "./tbs_full_logo.png";
 import { Link } from "react-router-dom";
 import Icon from 'antd/es/icon';
@@ -8,7 +8,7 @@ import Menu from 'antd/es/menu'
 import 'antd/es/menu/style/css'
 import Layout from 'antd/es/layout'
 import 'antd/es/layout/style/css'
-
+import "./NavBar.css";
 
 const { SubMenu } = Menu;
 // const { Header } = Layout;
