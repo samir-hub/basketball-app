@@ -13,7 +13,7 @@ const PossessionBoxScore = (props) => {
 
 //   console.log(off_def_rating)
   return (
-    <>
+    <div className="h-scroll">
       <div className="second-team-div">
         <h1 className="team-main-heading">Points, Rebounds and Assists Per 100 Possessions by Team</h1>
         <BarChart
@@ -37,7 +37,7 @@ const PossessionBoxScore = (props) => {
       </div>
     
    
-    </>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ const AdvancedShooting = (props) => {
 
 //   console.log(off_def_rating)
   return (
-    <>
+    <div className="h-scroll">
       <div className="second-team-div">
         <h1 className="team-main-heading">eFG% and TS% by Team</h1>
         <BarChart
@@ -38,7 +38,7 @@ const AdvancedShooting = (props) => {
       </div>
     
    
-    </>
+    </div>
   );
 };
 

@@ -13,7 +13,7 @@ const PossessionShooting = (props) => {
 
 //   console.log(off_def_rating)
   return (
-    <>
+    <div className="h-scroll">
       <div className="second-team-div">
         <h1 className="team-main-heading">FG Made/FG Missed and Threes Made/Threes Missed per 100 Possessions by Team</h1>
         <BarChart
@@ -38,7 +38,7 @@ const PossessionShooting = (props) => {
       </div>
     
    
-    </>
+    </div>
   );
 };
 

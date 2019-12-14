@@ -14,9 +14,9 @@ const TeamEfficiency = (props) => {
 
   console.log(off_def_rating)
   return (
-    <>
+    <div className="team-eff-div">
       <div className="second-team-div">
-        <h1 className="team-main-heading">Offensive and Defensive Efficiency by Team:</h1>
+        <h1 className="team-main-heading">Offensive and Defensive Efficiency by Team</h1>
       </div>
      
       <LineChart
@@ -38,7 +38,7 @@ const TeamEfficiency = (props) => {
       </LineChart>
      
    
-    </>
+    </div>
   );
 };
 

@@ -1,18 +1,27 @@
 
   @media only screen and (max-width: 600px) {
     .team-chart {
-      width: 1300px;
+      width: 100%;
     }
   }
 
   @media only screen and (max-width: 600px) {
     .chart-container {
-      width: 1350px;
+      width: 100%;
     }
   }
 
   @media only screen and (max-width: 600px) {
     .layout-container {
-      width: 1350px;
+      width: 100%;
     }
+  }
+
+
+  .h-scroll, .team-eff-div{
+    width: 95%;
+    height:500px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
   }
