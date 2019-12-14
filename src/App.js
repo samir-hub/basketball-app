@@ -9,7 +9,6 @@ import PlayerStats from "./components/PlayerStats";
 import MyTeam from "./components/MyTeam";
 import Standings from "./components/Standings";
 import MobileNavBar from "./components/MobileNavBar";
-import logo from "./components/tbs_avatar_logo.png";
 import MobileHeader from "./components/MobileHeader";
 // import TabBarComp from './components/TabBarComp';
 

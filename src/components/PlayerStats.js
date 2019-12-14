@@ -121,8 +121,8 @@ const PlayerStats = props => {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ padding: "0 5px 5px" }}>
-            <Breadcrumb style={{ margin: "5px 0" }}></Breadcrumb>
+          <Layout style={{ padding: "0 24px 24px" }}>
+            <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
             <Content
             
               style={{

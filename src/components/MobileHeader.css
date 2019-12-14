@@ -1,0 +1,30 @@
+.mobile-header {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-header {
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 0.005px solid gray;
+  }
+}
+
+.mh-title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-image {
+    width: 35px;
+    height: auto;
+    border-radius: 3px;
+    margin-left: 46%;
+    margin-right: 46%;
+  }
+}
