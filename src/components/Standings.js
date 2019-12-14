@@ -82,7 +82,7 @@ const Standings = () => {
   return (
     <div className="standings-div">
       <Layout className="standings-layout">
-        <Layout style={{ padding: "0 24px 24px" }}>
+        <Layout style={{ padding: "0 10px 10px" }}>
           <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
           <Content
           className="standings-content"

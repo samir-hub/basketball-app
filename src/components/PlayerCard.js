@@ -91,14 +91,14 @@ const PlayerCard = props => {
                 />
               </Col>
               <Col span={8}>
-                <Statistic title="Threes Att" value={stat.tpa} precision={2} />
+                <Statistic title="3PA" value={stat.tpa} precision={2} />
               </Col>
               <Col span={8}>
-                <Statistic title="Threes Made" value={stat.tpm} precision={2} />
+                <Statistic title="3PM" value={stat.tpm} precision={2} />
               </Col>
               <Col span={8}>
                 <Statistic
-                  title="Personal Fouls"
+                  title="PF"
                   value={stat.pf}
                   precision={2}
                 />

@@ -11,6 +11,8 @@ import Card from 'antd/es/card'
 import 'antd/es/card/style/css'
 import Alert from 'antd/es/alert'
 import 'antd/es/alert/style/css'
+import notification from 'antd/es/notification';
+import 'antd/es/notification/style/css'
 import FooterComp from "./FooterComp";
 import OfflineNotification from "./OfflineNotification";
 
@@ -27,6 +29,13 @@ const Home = () => {
 // Detects if device is in standalone mode
 const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
+// const openNotificationWithIcon = type => {
+//   notification[type]({
+//     message: 'Notification Title',
+//     description:
+//       'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+//   });
+// };
 
   return (
     <>
@@ -66,17 +75,6 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
           className="mobile-home-card"
           style={{ width: 300 }}
           cover={<img alt="example" src={westbrook} />}
-          actions={[
-            <Link to="/myteam">
-              <Icon type="user" key="user" />
-            </Link>,
-            <Link to="/standings">
-              <Icon type="profile" key="profile" />
-            </Link>,
-            <Link to="/playerstats">
-              <Icon type="dot-chart" key="dot-chart" />
-            </Link>
-          ]}
         >
           <h2 className="cta-heading">Welcome to theballscreen</h2>
           <Meta
@@ -87,10 +85,12 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
         <OfflineNotification/>
         {!isInStandaloneMode() && (<div className="mobile-alert">
           <Alert
+          style={{ marginBottom: '50px' }}
             message="For a better experience, open this page in Safari, press the Action menu at the bottom center and press 'Add to Home Screen'. Enjoy!"
             type="warning"
             closable
           />
+          {/* {openNotificationWithIcon('info')} */}
         </div>)}
 
       </div>

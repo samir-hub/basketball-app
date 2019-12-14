@@ -121,7 +121,7 @@ const PlayerStats = props => {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ padding: "0 24px 24px" }}>
+          <Layout style={{ padding: "0 10px 10px" }}>
             <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
             <Content
             
@@ -129,7 +129,8 @@ const PlayerStats = props => {
                 background: "#fff",
                 padding: 24,
                 margin: 0,
-                minHeight: 280
+                minHeight: 280,
+                minWidth: 300
               }}
             >
               <ShotChart chosen={chosen} />

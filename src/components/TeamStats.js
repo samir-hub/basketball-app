@@ -181,7 +181,7 @@ const TeamStats = () => {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ padding: "0 24px 24px" }}>
+          <Layout style={{ padding: "0 10px 10px" }}>
             <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
             <Content
             className="chart-container"

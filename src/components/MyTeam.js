@@ -119,15 +119,16 @@ const MyTeam = props => {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ padding: "0 24px 24px" }}>
+          <Layout style={{ padding: "0 10px 10px" }}>
             <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
             <Content
-            
+              className="my-team-content"
               style={{
                 background: "#fff",
                 padding: 24,
                 margin: 0,
-                minHeight: 280
+                minHeight: 280,
+                minWidth: 300
               }}
             >
               <PlayerCard chosen={chosen} />
