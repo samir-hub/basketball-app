@@ -63,6 +63,7 @@ const PlayerStats = props => {
 
 
   console.log(chosen);
+  console.log('props in Player stats', props);
 
   return (
     <div>

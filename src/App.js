@@ -9,7 +9,8 @@ import PlayerStats from "./components/PlayerStats";
 import MyTeam from "./components/MyTeam";
 import Standings from "./components/Standings";
 import MobileNavBar from "./components/MobileNavBar";
-import logo from './components/tbs_avatar_logo.png';
+import logo from "./components/tbs_avatar_logo.png";
+import MobileHeader from "./components/MobileHeader";
 // import TabBarComp from './components/TabBarComp';
 
 function App() {
@@ -34,10 +35,10 @@ function App() {
     <div className="app-container">
       <BrowserRouter>
         <header className="main-header">
-          <NavBar className="desktop-navbar" />
-          <div className="mobile-header">
-            <img className="logo-image" src={logo} alt="logo"/>
-          </div>
+          <NavBar/>
+           <Route
+            render={props => <MobileHeader {...props} />}
+          />
         </header>
         <Switch>
           <Route
@@ -52,24 +53,24 @@ function App() {
           <Route
             path="/playerstats"
             render={props => (
-              <PlayerStats {...props} teamsAndIds={teamsAndIds} namesAndIds={namesAndIds} />
+              <PlayerStats
+                {...props}
+                teamsAndIds={teamsAndIds}
+                namesAndIds={namesAndIds}
+              />
             )}
           />
           <Route
             path="/myteam"
-            render={props => (
-              <MyTeam {...props} teamsAndIds={teamsAndIds} />
-            )}
+            render={props => <MyTeam {...props} teamsAndIds={teamsAndIds} />}
           />
-            <Route
+          <Route
             path="/standings"
-            render={props => (
-              <Standings {...props} teamsAndIds={teamsAndIds} />
-            )}
+            render={props => <Standings {...props} teamsAndIds={teamsAndIds} />}
           />
         </Switch>
         <footer>
-          <MobileNavBar className="mobile-navbar"/>
+          <MobileNavBar className="mobile-navbar" />
         </footer>
       </BrowserRouter>
     </div>

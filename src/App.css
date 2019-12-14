@@ -25,6 +25,7 @@
   width: 35px;
   height: auto;
   border-radius: 3px;
+ 
   
 }
 .mobile-header{
@@ -36,8 +37,8 @@
  display: block;
  margin: auto;
  width: 35px;
- padding-top: 10px;
- padding-bottom: 10px;
+ padding-top: 6px;
+ padding-bottom: 6px;
 }
 }
 
