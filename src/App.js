@@ -9,6 +9,7 @@ import PlayerStats from "./components/PlayerStats";
 import MyTeam from "./components/MyTeam";
 import Standings from "./components/Standings";
 import MobileNavBar from "./components/MobileNavBar";
+import logo from './components/tbs_avatar_logo.png';
 // import TabBarComp from './components/TabBarComp';
 
 function App() {
@@ -32,8 +33,11 @@ function App() {
   return (
     <div className="app-container">
       <BrowserRouter>
-        <header>
+        <header className="main-header">
           <NavBar className="desktop-navbar" />
+          <div className="mobile-header">
+            <img className="logo-image" src={logo} alt="logo"/>
+          </div>
         </header>
         <Switch>
           <Route

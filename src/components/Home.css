@@ -1,5 +1,5 @@
 .main-div {
-  background: slategrey;
+  background: white;
   height: 90vh;
   display: flex;
   justify-content: space-between;
@@ -190,4 +190,10 @@
     display: block;
     
   }
+}
+
+@media only screen and (max-width: 600px) {
+.main-div{
+  border-top: .005px solid gray;
+}
 }

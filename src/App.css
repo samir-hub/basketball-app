@@ -21,3 +21,23 @@
   color: #09d3ac;
 }
 
+.logo-image {
+  width: 35px;
+  height: auto;
+  border-radius: 3px;
+  
+}
+.mobile-header{
+  display: none;
+ }
+
+@media only screen and (max-width: 600px) {
+.mobile-header{
+ display: block;
+ margin: auto;
+ width: 35px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+}
+
