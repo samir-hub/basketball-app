@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, 
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, 
 } from 'recharts';
 import "./TeamStats.css";
 
@@ -19,7 +19,7 @@ const TeamEfficiency = (props) => {
         <h1 className="team-main-heading">Offensive and Defensive Efficiency by Team</h1>
       </div>
      
-      <LineChart
+      <BarChart
         className="team-chart"
         width={1300}
         height={500}
@@ -33,9 +33,9 @@ const TeamEfficiency = (props) => {
         <YAxis domain={['dataMin', 'dataMax']} />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="off_rating" stroke="#2f4f4f" activeDot={{ r: 6 }} />
-        <Line type="monotone" dataKey="def_rating" stroke="#de733f" activeDot={{ r: 6 }}/>
-      </LineChart>
+        <Bar  dataKey="off_rating" fill="#2f4f4f"  />
+        <Bar  dataKey="def_rating" fill="#de733f" />
+      </BarChart>
      
    
     </div>

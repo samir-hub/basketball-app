@@ -32,8 +32,8 @@ const PossessionShooting = (props) => {
         <Legend />
         <Bar dataKey="fg_made" stackId="a" fill="#8884d8" />
         <Bar dataKey="fg_missed" stackId="a" fill="#82ca9d" />
-        <Bar dataKey="threes_made" stackId="b" fill="#001529" />
-        <Bar dataKey="threes_missed" stackId="b" fill="gray" />
+        <Bar dataKey="threes_made" stackId="b" fill="#2f4f4f"  />
+        <Bar dataKey="threes_missed" stackId="b" fill="#de733f" />
       </BarChart>
       </div>
     

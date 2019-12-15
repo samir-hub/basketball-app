@@ -51,7 +51,7 @@ function MobileNavBar() {
         </Menu.Item>
   
         <Menu.Item className="m-1" key="team">
-          <Link to="/teamstats"><Icon style={{ fontSize: '20px' }} type="line-chart" /></Link>
+          <Link to="/teamstats"><Icon style={{ fontSize: '20px' }} type="bar-chart" /></Link>
         </Menu.Item>
       </Menu>
 

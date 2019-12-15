@@ -32,8 +32,8 @@ const AdvancedShooting = (props) => {
       
         <Tooltip />
         <Legend />
-        <Bar dataKey="efg_percentage" fill="#8884d8" />
-        <Bar dataKey="true_shooting_percentage" fill="#82ca9d" />
+        <Bar dataKey="efg_percentage" fill="#2f4f4f" />
+        <Bar dataKey="true_shooting_percentage" fill="#de733f" />
       </BarChart>
       </div>
     
