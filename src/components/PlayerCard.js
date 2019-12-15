@@ -30,8 +30,6 @@ const PlayerCard = props => {
     });
   }, [api]);
 
-  console.log(newData);
-
   return isFetching ? (
     <div className="shot-spinner spinner">
       <Spin size="large" />

@@ -40,7 +40,6 @@ const TeamStats = () => {
 
   useEffect(() => {
     axios.get(advancedApi).then(response => {
-      console.log(response.data);
       setAdvancedData(response.data);
       setIsAdvancedFetching(false);
     });
@@ -52,7 +51,6 @@ const TeamStats = () => {
 
   useEffect(() => {
     axios.get(possessionApi).then(response => {
-      console.log(response.data);
       setPossessionData(response.data);
       setIsPossessionFetching(false);
     });
@@ -67,12 +65,6 @@ const TeamStats = () => {
           <Sider
             breakpoint="lg"
             collapsedWidth="0"
-            onBreakpoint={broken => {
-              console.log(broken);
-            }}
-            onCollapse={(collapsed, type) => {
-              console.log(collapsed, type);
-            }}
             className="my-player-submenu"
             style={{ background: "#fff" }}
           >

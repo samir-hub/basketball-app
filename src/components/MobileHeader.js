@@ -3,7 +3,6 @@ import logo from "../components/tbs_avatar_logo.png";
 import "./MobileHeader.css";
 
 const MobileHeader = props => {
-  console.log("props in Mobile H", props);
   return (
     <div className="mobile-header">
       {props.location.pathname === "/" && (

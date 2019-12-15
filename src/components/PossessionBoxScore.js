@@ -11,7 +11,6 @@ const PossessionBoxScore = (props) => {
      return {name: e.team_abbrev, points: e.points, rebounds: e.oreb + e.dreb, assists: e.ast};
   })
 
-//   console.log(off_def_rating)
   return (
     <div className="h-scroll">
       <div className="second-team-div">

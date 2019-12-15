@@ -99,10 +99,6 @@ const WesternStandings = props => {
 
   const data = addPos;
 
-  
-
-  console.log("this", max)
-
   return (
     <div className="standings-div">
       <div className="second-standings-div">

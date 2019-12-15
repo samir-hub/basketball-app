@@ -60,9 +60,6 @@ const MyTeam = props => {
     }
   };
 
-
-  console.log(chosen);
-
   return (
     <div>
       <Layout>
@@ -70,12 +67,6 @@ const MyTeam = props => {
           <Sider
             breakpoint="lg"
             collapsedWidth="0"
-            onBreakpoint={broken => {
-              console.log(broken);
-            }}
-            onCollapse={(collapsed, type) => {
-              console.log(collapsed, type);
-            }}
             className="my-player-submenu"
             style={{ background: "#fff" }}
           >

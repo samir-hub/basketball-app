@@ -76,9 +76,6 @@ const Standings = () => {
       };
       return null;
   });
-
-  console.log(eastern_conf);
-  console.log(western_conf);
   return (
     <div className="standings-div">
       <Layout className="standings-layout">

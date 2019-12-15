@@ -12,7 +12,6 @@ const TeamEfficiency = (props) => {
      return {name: e.team_abbrev, off_rating: e.off_rating, def_rating: e.def_rating};
   })
 
-  console.log(off_def_rating)
   return (
     <div className="team-eff-div">
       <div className="second-team-div">

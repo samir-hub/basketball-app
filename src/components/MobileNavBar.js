@@ -21,7 +21,6 @@ function MobileNavBar() {
   });
 
   const handleClick = e => {
-    console.log("click ", e);
     setMenu({
       current: e.key
     });

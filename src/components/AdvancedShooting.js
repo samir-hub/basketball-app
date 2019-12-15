@@ -12,7 +12,6 @@ const AdvancedShooting = (props) => {
      return {name: e.team_abbrev, efg_percentage: e.efg_percentage, true_shooting_percentage: e.true_shooting_percentage};
   })
 
-//   console.log(off_def_rating)
   return (
     <div className="h-scroll">
       <div className="second-team-div">

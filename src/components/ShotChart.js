@@ -41,8 +41,6 @@ const ShotChart = props => {
     });
   }, [api]);
 
-  console.log(data);
-
   return isFetching ? (
     <div className="shot-spinner spinner">
       <Spin size="large"/>

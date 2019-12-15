@@ -12,7 +12,6 @@ const AdvancedDefense = (props) => {
      return {name: e.team_abbrev, opp_efg_percentage: e.opp_efg_percentage, opp_tov_percentage: e.opp_tov_percentage};
   })
 
-//   console.log(off_def_rating)
   return (
     <div className="h-scroll">
       <div className="second-team-div">

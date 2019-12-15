@@ -61,10 +61,6 @@ const PlayerStats = props => {
     }
   };
 
-
-  console.log(chosen);
-  console.log('props in Player stats', props);
-
   return (
     <div>
       <Layout>
@@ -72,12 +68,6 @@ const PlayerStats = props => {
           <Sider
             breakpoint="lg"
             collapsedWidth="0"
-            onBreakpoint={broken => {
-              console.log(broken);
-            }}
-            onCollapse={(collapsed, type) => {
-              console.log(collapsed, type);
-            }}
             className="my-player-submenu"
             style={{ background: "#fff" }}
           >

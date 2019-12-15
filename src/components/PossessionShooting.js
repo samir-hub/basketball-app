@@ -11,7 +11,6 @@ const PossessionShooting = (props) => {
      return {name: e.team_abbrev, fg_made: e.fgm, fg_missed: (e.fga-e.fgm).toFixed(1), fg_attempted: e.fga, threes_made: e.tpm, threes_missed: (e.tpa-e.tpm).toFixed(1)};
   })
 
-//   console.log(off_def_rating)
   return (
     <div className="h-scroll">
       <div className="second-team-div">

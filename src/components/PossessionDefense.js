@@ -11,7 +11,6 @@ const PossessionDefense = (props) => {
      return {name: e.team_abbrev, steals: e.stl, blocks: e.blk};
   })
 
-//   console.log(off_def_rating)
   return (
     <div className="h-scroll">
       <div className="second-team-div">

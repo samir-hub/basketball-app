@@ -7,10 +7,6 @@ import "./Standings.css";
 
 const EasternStandings = props => {
 
-  
-
-  console.log("THISSS", props.eastern_conf);
-
   let pctNumbers = props.eastern_conf.map(e => {
     return e.wins - (e.gp-e.wins);
   });
