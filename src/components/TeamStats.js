@@ -9,6 +9,8 @@ import Layout from 'antd/es/layout'
 // import 'antd/es/layout/style/css'
 import Breadcrumb from 'antd/es/breadcrumb'
 // import 'antd/es/breadcrumb/style/css'
+import Spin from "antd/es/spin";
+import "antd/es/spin/style/css";
 
 import "./TeamStats.css";
 import TeamEfficiency from "./TeamEfficiency";
@@ -29,6 +31,8 @@ const TeamStats = () => {
   const [showPosBoxScore, setShowPosBoxScore] = useState(false);
   const [showPosShooting, setShowPosShooting] = useState(false);
   const [showPosDef, setShowPosDef] = useState(false);
+  const [isAdvancedFetching, setIsAdvancedFetching] = useState(true);
+  const [isPossessionFetching, setIsPossessionFetching] = useState(true);
 
   const [advancedData, setAdvancedData] = useState([]);
 
@@ -38,6 +42,7 @@ const TeamStats = () => {
     axios.get(advancedApi).then(response => {
       console.log(response.data);
       setAdvancedData(response.data);
+      setIsAdvancedFetching(false);
     });
   }, [advancedApi]);
 
@@ -49,10 +54,13 @@ const TeamStats = () => {
     axios.get(possessionApi).then(response => {
       console.log(response.data);
       setPossessionData(response.data);
+      setIsPossessionFetching(false);
     });
   }, [possessionApi]);
 
-  return (
+  return isAdvancedFetching && isPossessionFetching ? (<div className="shot-spinner spinner">
+  <Spin size="large" />
+</div>) : (
     <div className="team-div">
       <Layout>
         <Layout className="layout-container" >

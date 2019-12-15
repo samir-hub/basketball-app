@@ -1,58 +1,55 @@
 .player-div {
-  
 }
 
-.player-chart{
-  margin: 0 auto; 
+.player-chart {
+  margin: 0 auto;
   width: 100%;
-   
 }
 
-
+@media only screen and (max-width: 600px) {
+  .player-div {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
 
 @media only screen and (max-width: 600px) {
-    .player-div {
-      max-width: 100%;
-      flex-direction: column;
-      
-    }
+  .player-chart {
+    transform: scale(0.45);
+    margin: 0 auto;
+    width: 100%;
   }
-
-@media only screen and (max-width: 600px) {
-    .player-chart {
-      transform: scale(0.45);
-      margin: 0 auto; 
-      width: 100%;
-    }
-  }
+}
 
 .select-form {
   margin-left: 20px;
-   
 }
 
 @media only screen and (max-width: 600px) {
-    .select-form {
-      margin: 0 auto; 
-    }
+  .select-form {
+    margin: 0 auto;
   }
+}
 
-  @media only screen and (max-width: 600px) {
-    .stylethis {
-     
-
-    }
+@media only screen and (max-width: 600px) {
+  .stylethis {
   }
+}
 
-  .sc-main-div{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  
-  }
+.sc-main-div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
-  .shot-title {
-    font-size: 2rem;
-    text-align: center;
-    
-  }
+.shot-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}

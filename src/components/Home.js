@@ -11,7 +11,6 @@ import Card from 'antd/es/card'
 import 'antd/es/card/style/css'
 import Alert from 'antd/es/alert'
 import 'antd/es/alert/style/css'
-import notification from 'antd/es/notification';
 import 'antd/es/notification/style/css'
 import FooterComp from "./FooterComp";
 import OfflineNotification from "./OfflineNotification";
