@@ -3,6 +3,8 @@ import axios from "axios";
 import "./PlayerStats.css";
 import Spin from "antd/es/spin";
 import "antd/es/spin/style/css";
+import Card from "antd/es/card";
+import 'antd/es/card/style/css';
 
 import {
   ScatterChart,
@@ -46,7 +48,8 @@ const ShotChart = props => {
       <Spin size="large"/>
     </div>
   ) : (
-    <>
+
+    <Card>
       {data.map((prop, key) => {
         return (
           <h1 className="shot-title" key={key}>
@@ -108,7 +111,8 @@ const ShotChart = props => {
           />
         </ScatterChart>
       </div>
-    </>
+      </Card>
+ 
   );
 };
 
