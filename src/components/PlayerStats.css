@@ -14,10 +14,11 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .player-chart {
-    transform: scale(0.45);
+  .sc-main-div {
+    transform: scale(0.40);
     margin: 0 auto;
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -32,7 +33,13 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .stylethis {
+  .ant-card-body {
+    display: flex;
+    max-height: 500px;
+    flex-direction: column;
+    width: 99%;
+    padding: 5px;
+    margin: 0;
   }
 }
 

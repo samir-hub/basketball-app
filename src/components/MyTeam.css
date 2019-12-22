@@ -19,3 +19,11 @@
         width: 100px;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    .outer-layout{
+        max-height: 600px;
+        padding: 0px;
+        margin: 0px;
+    }
+  }

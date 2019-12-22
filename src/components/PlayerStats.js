@@ -64,7 +64,7 @@ const PlayerStats = props => {
   return (
     <div>
       <Layout>
-        <Layout>
+        <Layout className="outer-layout">
           <Sider
             breakpoint="lg"
             collapsedWidth="0"
@@ -120,7 +120,7 @@ const PlayerStats = props => {
                 padding: 24,
                 margin: 0,
                 minHeight: 280,
-                minWidth: 300
+                minWidth: 300, 
               }}
             >
               <ShotChart chosen={chosen} />
