@@ -111,13 +111,13 @@ const PlayerStats = props => {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ padding: "0 10px 10px" }}>
+          <Layout className="layout-around-card" style={{ padding: "0 10px 10px" }}>
             <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
             <Content
             
               style={{
                 background: "#fff",
-                padding: 24,
+                padding: 10,
                 margin: 0,
                 minHeight: 280,
                 minWidth: 300, 
