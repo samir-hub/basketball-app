@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./PlayerStats.css";
+import "../PlayerStats.css";
 import Spin from "antd/es/spin";
 import "antd/es/spin/style/css";
 import Card from "antd/es/card";

@@ -15,7 +15,7 @@ import "antd/es/spin/style/css";
 
 import axios from "axios";
 
-import "./PlayerCard.css";
+import "../PlayerCard.css";
 
 const PlayerCard = props => {
   const [newData, setNewData] = useState([]);

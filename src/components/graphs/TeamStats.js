@@ -12,10 +12,10 @@ import Breadcrumb from 'antd/es/breadcrumb'
 import Spin from "antd/es/spin";
 import "antd/es/spin/style/css";
 
-import "./TeamStats.css";
+import "../TeamStats.css";
 import TeamEfficiency from "./TeamEfficiency";
 import AdvancedDefense from "./AdvancedDefense";
-import FooterComp from "./FooterComp";
+import FooterComp from "../FooterComp";
 import AdvancedShooting from "./AdvancedShooting";
 import PossessionBoxScore from "./PossessionBoxScore";
 import PossessionShooting from "./PossessionShooting";

@@ -9,7 +9,7 @@ import Breadcrumb from 'antd/es/breadcrumb'
 import "./Standings.css";
 import EasternStandings from "./EasternStandings";
 import WesternStandings from "./WesternStandings";
-import FooterComp from "./FooterComp";
+import FooterComp from "../FooterComp";
 
 
 const { Content } = Layout;

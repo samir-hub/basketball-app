@@ -2,7 +2,7 @@ import React from "react";
 import {
     BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
   } from 'recharts';
-import "./TeamStats.css";
+import "../TeamStats.css";
 
 const AdvancedDefense = (props) => {
 

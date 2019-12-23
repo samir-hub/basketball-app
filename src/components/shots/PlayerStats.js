@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./MyTeam.css";
+import "../MyTeam.css";
 import axios from "axios";
 
 import Icon from 'antd/es/icon';
@@ -11,13 +11,14 @@ import Layout from 'antd/es/layout'
 import Breadcrumb from 'antd/es/breadcrumb'
 // import 'antd/es/breadcrumb/style/css'
 
-import PlayerCard from "./PlayerCard";
-import FooterComp from "./FooterComp";
+
+import ShotChart from "./ShotChart";
+import FooterComp from "../FooterComp";
 
 const { SubMenu } = Menu;
-const { Content, Sider} = Layout;
+const { Content, Sider } = Layout;
 
-const MyTeam = props => {
+const PlayerStats = props => {
   const [data, setData] = useState([]);
   const [favTeam, setFavTeam] = useState({
     teamId: "1610612745",
@@ -63,7 +64,7 @@ const MyTeam = props => {
   return (
     <div>
       <Layout>
-        <Layout>
+        <Layout className="outer-layout">
           <Sider
             breakpoint="lg"
             collapsedWidth="0"
@@ -72,7 +73,7 @@ const MyTeam = props => {
           >
             <form className="select-team-form">
               <div className="field">
-                <h1 className="select-title">Select Your Team:</h1>
+                <h1 className="select-title">Select a Team:</h1>
                 <select
                   onChange={e => setFavTeam({ teamName: e.target.value })}
                 >
@@ -83,7 +84,7 @@ const MyTeam = props => {
             </form>
             <Menu
               mode="inline"
-              defaultSelectedKeys={["8"]}
+              defaultSelectedKeys={["1"]}
               defaultOpenKeys={["sub1"]}
               style={{ height: "100%", borderRight: 0 }}
             >
@@ -110,19 +111,19 @@ const MyTeam = props => {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ padding: "0 10px 10px" }}>
+          <Layout className="layout-around-card" style={{ padding: "0 10px 10px" }}>
             <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
             <Content
-              className="my-team-content"
+            
               style={{
                 background: "#fff",
-                padding: 24,
+                padding: 10,
                 margin: 0,
                 minHeight: 280,
-                minWidth: 300
+                minWidth: 300, 
               }}
             >
-              <PlayerCard chosen={chosen} />
+              <ShotChart chosen={chosen} />
             </Content>
           </Layout>
         </Layout>
@@ -132,4 +133,4 @@ const MyTeam = props => {
   );
 };
 
-export default MyTeam;
+export default PlayerStats;
