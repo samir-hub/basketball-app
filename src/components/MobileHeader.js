@@ -34,7 +34,7 @@ const MobileHeader = props => {
 
   return (
     <div className="mobile-header">
-      {!isAuthenticated && (
+      {!isAuthenticated && props.location.pathname === "/" && (
         <Icon
           className="login-icon"
           onClick={() => loginWithRedirect({})}

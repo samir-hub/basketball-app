@@ -1,3 +1,7 @@
 .my-player-name {
     font-size: 2rem;
 }
+
+.ant-row {
+    padding: 10px;
+}
