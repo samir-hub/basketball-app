@@ -111,6 +111,8 @@ const EasternStandings = props => {
 
   const data = addPos;
 
+  console.log('data in standings',data)
+
   return (
     <div className="eastern-standings">
       <div className="second-standings-div">

@@ -52,6 +52,9 @@ function NavBar() {
               <Menu.Item key="setting:2">
                 <Link to="/myteam">Per Game Stats</Link>
               </Menu.Item>
+              <Menu.Item key="setting:3">
+                <Link to="/playerleaders">Stats Leaders</Link>
+              </Menu.Item>
             </Menu.ItemGroup>
           </SubMenu>
           <SubMenu
@@ -63,10 +66,10 @@ function NavBar() {
             }
           >
             <Menu.ItemGroup title="Team Stats">
-            <Menu.Item key="setting:3">
+            <Menu.Item key="setting:4">
                 <Link to="/standings">Standings</Link>
               </Menu.Item>
-              <Menu.Item key="setting:4">
+              <Menu.Item key="setting:5">
                 <Link to="/teamstats">Team Comparisons</Link>
               </Menu.Item>
               {/* <Menu.Item key="setting:4">Per Possession Stats</Menu.Item>
