@@ -17,6 +17,9 @@ const MobileHeader = props => {
       {props.location.pathname === "/playerstats" && (
         <h1 className="mh-title">Shot Charts</h1>
       )}
+      {props.location.pathname === "/playerleaders" && (
+        <h1 className="mh-title">Leaders</h1>
+      )}
       {props.location.pathname === "/teamstats" && (
         <h1 className="mh-title">Graphs</h1>
       )}
