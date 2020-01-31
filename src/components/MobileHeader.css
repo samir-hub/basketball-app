@@ -27,7 +27,7 @@
     width: 35px;
     height: auto;
     border-radius: 3px;
-    margin-left: 34%;
+    margin-left: 31%;
   }
 }
 
@@ -41,7 +41,7 @@
 
 @media only screen and (max-width: 600px) {
   .login-icon{
-      margin-left: 7%;
+      margin-left: 8%;
       transform: scale(2.2);
       height: auto;
   }
