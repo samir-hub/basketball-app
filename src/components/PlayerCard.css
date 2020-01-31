@@ -1,5 +1,10 @@
 .my-player-name {
     font-size: 2rem;
+
+}
+
+.ant-row {
+
     margin: 0;
 }
 
@@ -29,3 +34,4 @@
   .card-numbers {
       margin: 0 10px;
   }
+

@@ -13,11 +13,13 @@
     border-radius: 5px;
   }
 }
-
+@media only screen and (max-width: 600px) {
 .mh-title {
   text-align: center;
   font-size: 15px;
   font-weight: 1000;
+  margin: 0;
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -25,7 +27,22 @@
     width: 35px;
     height: auto;
     border-radius: 3px;
-    margin-left: 45%;
-    margin-right: 45%;
+    margin-left: 31%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-pic{
+      height: 40px;
+      border-radius: 50%;
+      margin-left: 3%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .login-icon{
+      margin-left: 8%;
+      transform: scale(2.2);
+      height: auto;
   }
 }

@@ -28,14 +28,6 @@ const Home = () => {
 // Detects if device is in standalone mode
 const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
-// const openNotificationWithIcon = type => {
-//   notification[type]({
-//     message: 'Notification Title',
-//     description:
-//       'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
-//   });
-// };
-
   return (
     <>
       <div className="main-div">
@@ -89,7 +81,6 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
             type="warning"
             closable
           />
-          {/* {openNotificationWithIcon('info')} */}
         </div>)}
 
       </div>
