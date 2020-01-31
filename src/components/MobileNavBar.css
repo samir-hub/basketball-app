@@ -5,6 +5,7 @@
     width: 100%;
     text-align: center;
     display: none;
+    border-top: 0.005px solid gray;
 }
 
 @media only screen and (max-width: 600px) {
