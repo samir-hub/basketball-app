@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 import Card from "antd/es/card";
-
 import Row from "antd/es/row";
 import "antd/es/row/style/css";
-
 import Col from "antd/es/col";
 import "antd/es/col/style/css";
-
 import Statistic from "antd/es/statistic";
 import "antd/es/statistic/style/css";
 import Spin from "antd/es/spin";
 import "antd/es/spin/style/css";
+import Icon from "antd/es/icon";
+import "antd/es/icon/style/css";
 
 import axios from "axios";
 
@@ -40,8 +39,16 @@ const PlayerCard = props => {
         {newData.map((stat, key) => {
           return (
             <Row key={key} gutter={16}>
-              <h1 className="my-player-name">{stat.player_name}</h1>
+              <div className="card-top">
+                <h1 className="my-player-name">{stat.player_name}</h1>
+                <div className="icon-div">
+                  <Link to="/playerleaders"><Icon style={{ fontSize: "40px", color: "#1890FF" }} type="profile" /></Link>
+                  <p className="icon-title">Leaders</p>
+                </div>
+              </div>
+              <div className="card-numbers">
               <p>Per Game</p>
+             
               <Col span={8}>
                 <Statistic title="Pts" value={stat.points} precision={2} />
               </Col>
@@ -91,6 +98,7 @@ const PlayerCard = props => {
               <Col span={8}>
                 <Statistic title="PF" value={stat.pf} precision={2} />
               </Col>
+              </div>
             </Row>
           );
         })}

@@ -72,7 +72,7 @@ const MyTeam = props => {
           >
             <form className="select-team-form">
               <div className="field">
-                <h1 className="select-title">Select Your Team:</h1>
+                <h1 className="select-title">Select A Team:</h1>
                 <select
                   onChange={e => setFavTeam({ teamName: e.target.value })}
                 >
@@ -83,6 +83,7 @@ const MyTeam = props => {
             </form>
             <Menu
               mode="inline"
+              
               defaultSelectedKeys={["8"]}
               defaultOpenKeys={["sub1"]}
               style={{ height: "100%", borderRight: 0 }}
@@ -99,6 +100,7 @@ const MyTeam = props => {
                 {myPlayers.map((player, key) => {
                   return (
                     <Menu.Item
+                    
                       className="my-player-names"
                       key={key}
                       onClick={() => setChosen(player.player_id)}

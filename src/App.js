@@ -10,6 +10,7 @@ import MyTeam from "./components/players/MyTeam";
 import Standings from "./components/standings/Standings";
 import MobileNavBar from "./components/MobileNavBar";
 import MobileHeader from "./components/MobileHeader";
+import PlayerBasicLeaders from "./components/leaders/PlayerBasicLeaders";
 // import TabBarComp from './components/TabBarComp';
 
 function App() {
@@ -53,6 +54,16 @@ function App() {
             path="/playerstats"
             render={props => (
               <PlayerStats
+                {...props}
+                teamsAndIds={teamsAndIds}
+                namesAndIds={namesAndIds}
+              />
+            )}
+          />
+          <Route
+            path="/playerleaders"
+            render={props => (
+              <PlayerBasicLeaders
                 {...props}
                 teamsAndIds={teamsAndIds}
                 namesAndIds={namesAndIds}

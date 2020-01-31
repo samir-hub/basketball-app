@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-
-// import logo from "./tbs_full_logo.png";
 import { Link } from "react-router-dom";
-// import Icon from "antd/es/icon";
 import Icon from 'antd/es/icon';
 import 'antd/es/icon/style/css';
 import "antd/es/icon/style/css";

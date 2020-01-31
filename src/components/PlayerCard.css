@@ -1,7 +1,37 @@
 .my-player-name {
     font-size: 2rem;
+
 }
 
 .ant-row {
-    padding: 10px;
+
+    margin: 0;
 }
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.icon-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-title {
+    color: #1890FF;
+}
+
+@media only screen and (max-width: 600px) {
+    .icon-title {
+        font-size: 12px;
+    }
+  }
+
+  .card-numbers {
+      margin: 0 10px;
+  }
+
