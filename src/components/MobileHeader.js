@@ -52,24 +52,79 @@ const MobileHeader = props => {
       {props.location.pathname === "/" && (
         <img className="logo-image" src={logo} alt="logo" />
       )}
+      {isAuthenticated && props.location.pathname === "/myteam" && (
+        <>
+          <img
+            onClick={() => showDrawer()}
+            className="profile-pic"
+            src={user.picture}
+            alt="Profile"
+          />
+          <h1 className="mh-title">Players</h1>
+        </>
+      )}
       {props.location.pathname === "/myteam" && (
         <h1 className="mh-title">Players</h1>
+      )}
+      {isAuthenticated && props.location.pathname === "/standings" && (
+        <>
+          <img
+            onClick={() => showDrawer()}
+            className="profile-pic"
+            src={user.picture}
+            alt="Profile"
+          />
+          <h1 className="mh-title">Standings</h1>
+        </>
       )}
       {props.location.pathname === "/standings" && (
         <h1 className="mh-title">Standings</h1>
       )}
+      {isAuthenticated && props.location.pathname === "/playerstats" && (
+        <>
+          <img
+            onClick={() => showDrawer()}
+            className="profile-pic"
+            src={user.picture}
+            alt="Profile"
+          />
+          <h1 className="mh-title">Shot Charts</h1>
+        </>
+      )}
       {props.location.pathname === "/playerstats" && (
         <h1 className="mh-title">Shot Charts</h1>
       )}
+      {isAuthenticated && props.location.pathname === "/playerleaders" && (
+        <>
+          <img
+            onClick={() => showDrawer()}
+            className="profile-pic"
+            src={user.picture}
+            alt="Profile"
+          />
+          <h1 className="mh-title">Leaders</h1>
+        </>
+      )}
       {props.location.pathname === "/playerleaders" && (
         <h1 className="mh-title">Leaders</h1>
+      )}
+      {isAuthenticated && props.location.pathname === "/teamstats" && (
+        <>
+          <img
+            onClick={() => showDrawer()}
+            className="profile-pic"
+            src={user.picture}
+            alt="Profile"
+          />
+          <h1 className="mh-title">Graphs</h1>
+        </>
       )}
       {props.location.pathname === "/teamstats" && (
         <h1 className="mh-title">Graphs</h1>
       )}
 
       <Drawer
-        title={isAuthenticated ? `${user.name}` : 'nothing'}
+        title={isAuthenticated ? `${user.name}` : "nothing"}
         placement="left"
         closable={false}
         onClose={onClose}
@@ -79,8 +134,15 @@ const MobileHeader = props => {
         <p>Option 2</p>
         <p>Option 3</p>
         <p>Option 4</p>
-        <Button size="large" onClick={() => logout()} type="primary" shape="round" icon="logout">Log Out</Button>
-        
+        <Button
+          size="large"
+          onClick={() => logout()}
+          type="primary"
+          shape="round"
+          icon="logout"
+        >
+          Log Out
+        </Button>
       </Drawer>
     </div>
   );
