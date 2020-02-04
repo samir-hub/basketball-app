@@ -52,72 +52,21 @@ const MobileHeader = props => {
       {props.location.pathname === "/" && (
         <img className="logo-image" src={logo} alt="logo" />
       )}
-      {isAuthenticated && props.location.pathname === "/myteam" && (
-        <>
-          <img
-            onClick={() => showDrawer()}
-            className="profile-pic"
-            src={user.picture}
-            alt="Profile"
-          />
-          <h1 className="mh-title">Players</h1>
-        </>
-      )}
+
       {props.location.pathname === "/myteam" && (
         <h1 className="mh-title">Players</h1>
       )}
-      {isAuthenticated && props.location.pathname === "/standings" && (
-        <>
-          <img
-            onClick={() => showDrawer()}
-            className="profile-pic"
-            src={user.picture}
-            alt="Profile"
-          />
-          <h1 className="mh-title">Standings</h1>
-        </>
-      )}
+
       {props.location.pathname === "/standings" && (
         <h1 className="mh-title">Standings</h1>
       )}
-      {isAuthenticated && props.location.pathname === "/playerstats" && (
-        <>
-          <img
-            onClick={() => showDrawer()}
-            className="profile-pic"
-            src={user.picture}
-            alt="Profile"
-          />
-          <h1 className="mh-title">Shot Charts</h1>
-        </>
-      )}
+
       {props.location.pathname === "/playerstats" && (
         <h1 className="mh-title">Shot Charts</h1>
       )}
-      {isAuthenticated && props.location.pathname === "/playerleaders" && (
-        <>
-          <img
-            onClick={() => showDrawer()}
-            className="profile-pic"
-            src={user.picture}
-            alt="Profile"
-          />
-          <h1 className="mh-title">Leaders</h1>
-        </>
-      )}
+
       {props.location.pathname === "/playerleaders" && (
         <h1 className="mh-title">Leaders</h1>
-      )}
-      {isAuthenticated && props.location.pathname === "/teamstats" && (
-        <>
-          <img
-            onClick={() => showDrawer()}
-            className="profile-pic"
-            src={user.picture}
-            alt="Profile"
-          />
-          <h1 className="mh-title">Graphs</h1>
-        </>
       )}
       {props.location.pathname === "/teamstats" && (
         <h1 className="mh-title">Graphs</h1>
