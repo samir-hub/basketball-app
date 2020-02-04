@@ -35,7 +35,7 @@ const PlayerCard = props => {
     </div>
   ) : (
     <div className="myplayer-main-div">
-      <Card>
+      <Card className="player-card-card">
         {newData.map((stat, key) => {
           return (
             <Row key={key} gutter={16}>

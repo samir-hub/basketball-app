@@ -3,13 +3,9 @@ import "../MyTeam.css";
 import axios from "axios";
 
 import Icon from 'antd/es/icon';
-// import 'antd/es/icon/style/css';
 import Menu from 'antd/es/menu'
-// import 'antd/es/menu/style/css'
 import Layout from 'antd/es/layout'
-// import 'antd/es/layout/style/css'
 import Breadcrumb from 'antd/es/breadcrumb'
-// import 'antd/es/breadcrumb/style/css'
 
 import PlayerCard from "./PlayerCard";
 import FooterComp from "../FooterComp";
@@ -112,7 +108,7 @@ const MyTeam = props => {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ padding: "0 10px 10px" }}>
+          <Layout style={{ padding: "0 10px 10px", minHeight: 500 }}>
             <Breadcrumb style={{ margin: "8px 0" }}></Breadcrumb>
             <Content
               className="my-team-content"
