@@ -4,21 +4,23 @@
 
 @media only screen and (max-width: 600px) {
   .mobile-header {
-    display: block;
-    margin: auto;
+    display: inline-block;
     width: 100%;
     padding-top: 6px;
     padding-bottom: 6px;
-    border-bottom: 0.005px solid gray;
+    border-bottom: 0.05px solid gray;
     border-radius: 5px;
   }
 }
 @media only screen and (max-width: 600px) {
 .mh-title {
+  display: inline-block;
+  width: 70%;
   text-align: center;
   font-size: 15px;
   font-weight: 1000;
   margin: 0;
+  padding: 5px 0;
 }
 }
 
@@ -33,6 +35,7 @@
 
 @media only screen and (max-width: 600px) {
   .profile-pic{
+    display: inline-block;
       height: 40px;
       border-radius: 50%;
       margin-left: 3%;
